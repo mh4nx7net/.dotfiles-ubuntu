@@ -1,0 +1,44 @@
+{
+	"name": "androidify",
+	"displayName": "androidify",
+	"description": "Android development in VSCode.",
+	"version": "0.0.1",
+	"publisher": "arahulc91",
+	"engines": {
+		"vscode": "^1.16.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.sayHello"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.sayHello",
+				"title": "Hello World"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.5.2",
+		"vscode": "^1.1.5",
+		"mocha": "^3.5.0",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "44380d00-79f2-442e-a2ce-bcaae51e1a49",
+		"publisherId": "9c70a723-f11b-4b30-a0c2-878a6f53d0a3",
+		"publisherDisplayName": "arahulc91"
+	}
+}

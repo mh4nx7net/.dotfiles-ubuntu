@@ -1,0 +1,81 @@
+{
+	"name": "black-vscode",
+	"displayName": "DEPRECATED: Black – Python code formatter",
+	"description": "VS Code formatter plugin for ambv/black",
+	"version": "2.0.6",
+	"minBlackVersion": "18.3a4",
+	"publisher": "joslarson",
+	"author": "Joseph Larson <@joslarson>",
+	"license": "BSD-3-Clause",
+	"galleryBanner": {
+		"color": "#262626",
+		"theme": "dark"
+	},
+	"homepage": "https://marketplace.visualstudio.com/items?itemName=joslarson.black-vscode",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/joslarson/black-vscode.git"
+	},
+	"engines": {
+		"vscode": "^1.23.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"icon": "icon.png",
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Black – Python code formatter configuration",
+			"properties": {
+				"black.lineLength": {
+					"type": "integer",
+					"default": 88,
+					"description": "Sets the desired line length",
+					"scope": "resource"
+				},
+				"black.fast": {
+					"type": "boolean",
+					"default": false,
+					"description": "Skips temporary sanity checks",
+					"scope": "resource"
+				},
+				"black.path": {
+					"type": "string",
+					"default": "black",
+					"description": "Custom path to black. If you want to use the same instance of black for all your workspaces (like for projects using < Python 3.6.0), modify this setting to include the full path.",
+					"scope": "resource"
+				},
+				"black.debug": {
+					"type": "boolean",
+					"default": false,
+					"description": "Set to true to enable extension debugging output.",
+					"scope": "resource"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.8.3",
+		"vscode": "^1.1.17",
+		"tslint": "^5.10.0",
+		"@types/node": "^10.0.3",
+		"@types/mocha": "^5.2.0"
+	},
+	"__metadata": {
+		"id": "2c5a0cb8-2228-4ad0-bda3-feb7902fb2d0",
+		"publisherId": "f1b11335-2984-4a18-99b0-b245836189a2",
+		"publisherDisplayName": "Joseph Larson"
+	}
+}

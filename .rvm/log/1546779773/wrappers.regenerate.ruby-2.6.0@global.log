@@ -1,0 +1,734 @@
+[2019-01-06 20:02:53] __rvm_with
+__rvm_with () 
+{ 
+    ( unset rvm_rvmrc_flag;
+    export rvm_create_flag=1;
+    export rvm_delete_flag=0;
+    export rvm_internal_use_flag=1;
+    export rvm_use_flag=0;
+    __rvm_use "$1" || return $?;
+    shift;
+    "$@" || return $? )
+}
+current path: /home/sec
+GEM_HOME=/home/sec/.rvm/gems/ruby-2.6.0
+GEM_PATH=/home/sec/.rvm/gems/ruby-2.6.0:/home/sec/.rvm/gems/ruby-2.6.0@global
+PATH=/home/sec/.rvm/gems/ruby-2.6.0/bin:/home/sec/.rvm/gems/ruby-2.6.0@global/bin:/home/sec/.rvm/rubies/ruby-2.6.0/bin:/home/sec/.rvm/bin:/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools
+command(4): __rvm_with ruby-2.6.0@global run_gem_wrappers regenerate
++ unset rvm_rvmrc_flag
++ export rvm_create_flag=1
++ rvm_create_flag=1
++ export rvm_delete_flag=0
++ rvm_delete_flag=0
++ export rvm_internal_use_flag=1
++ rvm_internal_use_flag=1
++ export rvm_use_flag=0
++ rvm_use_flag=0
++ __rvm_use ruby-2.6.0@global
++ typeset binary full_binary_path rvm_ruby_gem_home __path_prefix __path_suffix
++ __rvm_select ruby-2.6.0@global
++ true
++ __rvm_select_set_variable_defaults
++ export GEM_HOME GEM_PATH MY_RUBY_HOME RUBY_VERSION IRBRC
++ export rvm_env_string rvm_action rvm_alias_expanded rvm_archive_extension rvm_bin_flag rvm_bin_path rvm_debug_flag rvm_default_flag rvm_delete_flag rvm_docs_type rvm_dump_environment_flag rvm_error_message rvm_expanding_aliases rvm_file_name rvm_gemdir_flag rvm_gemset_name rvm_gemstone_package_file rvm_gemstone_url rvm_head_flag rvm_hook rvm_install_on_use_flag rvm_llvm_flag rvm_loaded_flag rvm_niceness rvm_nightly_flag rvm_only_path_flag rvm_parse_break rvm_patch_original_pwd rvm_pretty_print_flag rvm_proxy rvm_quiet_flag rvm_reload_flag rvm_remove_flag rvm_ruby_alias rvm_ruby_args rvm_ruby_binary rvm_ruby_bits rvm_ruby_configure rvm_ruby_file rvm_ruby_gem_home rvm_ruby_gem_path rvm_ruby_global_gems_path rvm_ruby_home rvm_ruby_interpreter rvm_ruby_irbrc rvm_ruby_major_version rvm_ruby_make rvm_ruby_make_install rvm_ruby_minor_version rvm_ruby_mode rvm_ruby_name rvm_ruby_package_file rvm_ruby_package_name rvm_ruby_patch rvm_ruby_patch_level rvm_ruby_release_version rvm_ruby_repo_url rvm_ruby_revision rvm_ruby_selected_flag rvm_ruby_sha rvm_ruby_string rvm_ruby_strings rvm_ruby_tag rvm_ruby_url rvm_ruby_user_tag rvm_ruby_version rvm_script_name rvm_sdk rvm_silent_flag rvm_sticky_flag rvm_system_flag rvm_token rvm_trace_flag rvm_use_flag rvm_user_flag rvm_verbose_flag rvm_ruby_repo_tag
++ __rvm_select_detect_ruby_string ruby-2.6.0@global
++ rvm_ruby_string=ruby-2.6.0@global
++ [[ -z ruby-2.6.0@global ]]
++ __rvm_ruby_string
++ true 0 0
++ rvm_expanding_aliases=
++ true '' '' '' '' '' '' '' @ ruby-2.6.0@global 0 0
++ [[ ruby-2.6.0@global == *\@* ]]
++ rvm_gemset_name=global
++ rvm_ruby_string=ruby-2.6.0
++ ((  rvm_expanding_aliases == 0  ))
++ [[ -n ruby-2.6.0 ]]
++ [[ ruby-2.6.0 != \s\y\s\t\e\m ]]
++ [[ -f /home/sec/.rvm/config/known_aliases ]]
++ [[ -s /home/sec/.rvm/config/known_aliases ]]
+++ __rvm_db_ /home/sec/.rvm/config/known_aliases ruby-2.6.0
+++ typeset __db __key __value
+++ __db=/home/sec/.rvm/config/known_aliases
+++ __key=ruby-2.6.0
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sec/.rvm/config/known_aliases ruby-2.6.0
+++ [[ -f /home/sec/.rvm/config/known_aliases ]]
+++ __rvm_sed -n -e '\#^ruby-2.6.0=# { s#^ruby-2.6.0=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^ruby-2.6.0=# { s#^ruby-2.6.0=##;; p; }' -e '/^$/d'
++ expanded_alias_name=
++ [[ -n '' ]]
++ ((  rvm_expanding_aliases == 0  ))
++ [[ -n ruby-2.6.0 ]]
++ [[ ruby-2.6.0 != \s\y\s\t\e\m ]]
++ [[ -f /home/sec/.rvm/config/alias ]]
++ [[ -s /home/sec/.rvm/config/alias ]]
+++ __rvm_db_ /home/sec/.rvm/config/alias ruby-2.6.0
+++ typeset __db __key __value
+++ __db=/home/sec/.rvm/config/alias
+++ __key=ruby-2.6.0
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sec/.rvm/config/alias ruby-2.6.0
+++ [[ -f /home/sec/.rvm/config/alias ]]
+++ __rvm_sed -n -e '\#^ruby-2.6.0=# { s#^ruby-2.6.0=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^ruby-2.6.0=# { s#^ruby-2.6.0=##;; p; }' -e '/^$/d'
++ expanded_alias_name=
++ [[ -n '' ]]
++ [[ ruby-2.6.0 == default ]]
++ [[ ruby-2.6.0 == *\@* ]]
++ [[ -n '' ]]
++ __rvm_ruby_string_parse
++ __rvm_ruby_string_parse_
++ typeset ruby_string gemset_name expanded_alias_name repo_url branch_name ruby_name tag_name
++ ruby_string=ruby-2.6.0
++ gemset_name=global
++ repo_url=
++ branch_name=
++ ruby_name=
++ tag_name=
++ __rvm_unset_ruby_variables
++ unset rvm_env_string rvm_ruby_string rvm_ruby_strings rvm_ruby_binary rvm_ruby_gem_home rvm_ruby_gem_path rvm_ruby_home rvm_ruby_interpreter rvm_ruby_irbrc rvm_ruby_log_path rvm_ruby_major_version rvm_ruby_minor_version rvm_ruby_package_name rvm_ruby_patch_level rvm_ruby_release_version rvm_ruby_repo_url rvm_ruby_repo_branch rvm_ruby_revision rvm_ruby_selected_flag rvm_ruby_tag rvm_ruby_version rvm_head_flag rvm_ruby_package_file rvm_ruby_configure rvm_ruby_name rvm_ruby_url rvm_ruby_global_gems_path rvm_ruby_args rvm_ruby_name rvm_llvm_flag rvm_ruby_repo_tag
++ __rvm_load_rvmrc
++ typeset _file
++ typeset -a rvm_rvmrc_files
++ ((  0 == 1  ))
++ [[ -n 022 ]]
++ rvm_rvmrc_files=("/etc/rvmrc" "$HOME/.rvmrc")
++ [[ -n /home/sec ]]
++ [[ /home/sec/.rvmrc -ef /home/sec/.rvmrc ]]
++ for _file in "${rvm_rvmrc_files[@]}"
++ [[ -s /etc/rvmrc ]]
++ for _file in "${rvm_rvmrc_files[@]}"
++ [[ -s /home/sec/.rvmrc ]]
++ __rvm_grep '^\s*rvm .*$' /home/sec/.rvmrc
++ source /home/sec/.rvmrc
+++ rvm_silence_path_mismatch_check_flag=1
++ return 0
++ rvm_ruby_repo_url=
++ rvm_ruby_repo_branch=
++ rvm_ruby_name=
++ rvm_ruby_repo_tag=
++ export rvm_head_flag=0
++ rvm_head_flag=0
++ [[ -z ruby-2.6.0 ]]
++ [[ ruby-2.6.0 == \c\u\r\r\e\n\t ]]
++ strings=()
++ __rvm_custom_separated_array strings - ruby-2.6.0
++ typeset IFS
++ IFS=-
++ [[ -n '' ]]
++ eval 'strings+=( $3 )'
+++ strings+=($3)
++ rvm_ruby_string=ruby-2.6.0
++ [[ -n '' ]]
++ for string in ${strings[@]}
++ case "$string" in
++ rvm_ruby_interpreter=ruby
++ for string in ${strings[@]}
++ case "$string" in
++ rvm_ruby_version=2.6.0
++ rvm_ruby_revision=
++ rvm_ruby_tag=
++ [[ -z ruby ]]
++ true
++ ((  0 == 1  ))
++ __rvm_ruby_string_parse_
++ typeset ruby_string gemset_name expanded_alias_name repo_url branch_name ruby_name tag_name
++ ruby_string=ruby-2.6.0
++ gemset_name=global
++ repo_url=
++ branch_name=
++ ruby_name=
++ tag_name=
++ __rvm_unset_ruby_variables
++ unset rvm_env_string rvm_ruby_string rvm_ruby_strings rvm_ruby_binary rvm_ruby_gem_home rvm_ruby_gem_path rvm_ruby_home rvm_ruby_interpreter rvm_ruby_irbrc rvm_ruby_log_path rvm_ruby_major_version rvm_ruby_minor_version rvm_ruby_package_name rvm_ruby_patch_level rvm_ruby_release_version rvm_ruby_repo_url rvm_ruby_repo_branch rvm_ruby_revision rvm_ruby_selected_flag rvm_ruby_tag rvm_ruby_version rvm_head_flag rvm_ruby_package_file rvm_ruby_configure rvm_ruby_name rvm_ruby_url rvm_ruby_global_gems_path rvm_ruby_args rvm_ruby_name rvm_llvm_flag rvm_ruby_repo_tag
++ __rvm_load_rvmrc
++ typeset _file
++ typeset -a rvm_rvmrc_files
++ ((  0 == 1  ))
++ [[ -n 022 ]]
++ rvm_rvmrc_files=("/etc/rvmrc" "$HOME/.rvmrc")
++ [[ -n /home/sec ]]
++ [[ /home/sec/.rvmrc -ef /home/sec/.rvmrc ]]
++ for _file in "${rvm_rvmrc_files[@]}"
++ [[ -s /etc/rvmrc ]]
++ for _file in "${rvm_rvmrc_files[@]}"
++ [[ -s /home/sec/.rvmrc ]]
++ __rvm_grep '^\s*rvm .*$' /home/sec/.rvmrc
++ source /home/sec/.rvmrc
+++ rvm_silence_path_mismatch_check_flag=1
++ return 0
++ rvm_ruby_repo_url=
++ rvm_ruby_repo_branch=
++ rvm_ruby_name=
++ rvm_ruby_repo_tag=
++ export rvm_head_flag=0
++ rvm_head_flag=0
++ [[ -z ruby-2.6.0 ]]
++ [[ ruby-2.6.0 == \c\u\r\r\e\n\t ]]
++ strings=()
++ __rvm_custom_separated_array strings - ruby-2.6.0
++ typeset IFS
++ IFS=-
++ [[ -n '' ]]
++ eval 'strings+=( $3 )'
+++ strings+=($3)
++ rvm_ruby_string=ruby-2.6.0
++ [[ -n '' ]]
++ for string in ${strings[@]}
++ case "$string" in
++ rvm_ruby_interpreter=ruby
++ for string in ${strings[@]}
++ case "$string" in
++ rvm_ruby_version=2.6.0
++ rvm_ruby_revision=
++ rvm_ruby_tag=
++ [[ -z ruby ]]
++ true
++ [[ -z ruby ]]
++ __rvm_ruby_string_find
++ __rvm_ruby_string_installed
++ typeset __ruby_inst_dir=/home/sec/.rvm/rubies/ruby-2.6.0
++ [[ -n '' ]]
++ [[ -n ruby ]]
++ [[ -n ruby-2.6.0 ]]
++ [[ -d /home/sec/.rvm/rubies/ruby-2.6.0 ]]
++ [[ -z global ]]
++ [[ 1 -eq 1 ]]
++ true
++ [[ -n '' ]]
++ detected_rvm_ruby_name=
++ rvm_ruby_name=
++ true
++ __rvm_select_after_parse
++ __rvm_select_interpreter_variables
++ rvm_archive_extension=tar.gz
++ [[ -z ruby ]]
++ rvm_ruby_interpreter=ruby
++ is_a_function __rvm_select_interpreter_ruby
++ typeset -f __rvm_select_interpreter_ruby
++ __rvm_select_interpreter_ruby
++ [[ '' == \p\0 ]]
++ rvm_ruby_package_name=ruby-2.6.0
++ rvm_ruby_package_file=ruby-2.6.0
++ [[ -z 2.6.0 ]]
+++ __rvm_db ruby_repo_url
+++ typeset value key variable
+++ key=ruby_repo_url
+++ variable=
+++ value=
+++ [[ -f /home/sec/.rvm/user/db ]]
++++ __rvm_db_ /home/sec/.rvm/user/db ruby_repo_url
++++ typeset __db __key __value
++++ __db=/home/sec/.rvm/user/db
++++ __key=ruby_repo_url
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/sec/.rvm/user/db ruby_repo_url
++++ [[ -f /home/sec/.rvm/user/db ]]
++++ __rvm_sed -n -e '\#^ruby_repo_url=# { s#^ruby_repo_url=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^ruby_repo_url=# { s#^ruby_repo_url=##;; p; }' -e '/^$/d'
+++ value=
+++ [[ -z '' ]]
+++ [[ -f /home/sec/.rvm/config/db ]]
++++ __rvm_db_ /home/sec/.rvm/config/db ruby_repo_url
++++ typeset __db __key __value
++++ __db=/home/sec/.rvm/config/db
++++ __key=ruby_repo_url
++++ shift 2
++++ __value=
++++ case "${__value}" in
++++ __rvm_db_get /home/sec/.rvm/config/db ruby_repo_url
++++ [[ -f /home/sec/.rvm/config/db ]]
++++ __rvm_sed -n -e '\#^ruby_repo_url=# { s#^ruby_repo_url=##;; p; }' -e '/^$/d'
++++ sed -n -e '\#^ruby_repo_url=# { s#^ruby_repo_url=##;; p; }' -e '/^$/d'
+++ value=https://github.com/ruby/ruby.git
+++ [[ -n https://github.com/ruby/ruby.git ]]
+++ [[ -n '' ]]
+++ echo https://github.com/ruby/ruby.git
+++ true
++ rvm_ruby_repo_url=https://github.com/ruby/ruby.git
++ ((  0 == 0  ))
++ __rvm_version_compare 2.6.0 -lt 1.8.5
++ typeset first
+++ command printf %b '2.6.0\n1.8.5\n'
+++ printf %b '2.6.0\n1.8.5\n'
+++ command head -n1
+++ head -n1
+++ __rvm_version_sort
+++ command awk '-F[.-]' -v OFS=. '{                   # split on "." and "-", merge back with "."
+    original=$0                                        # save original to preserve it before the line is changed
+    for (n=1; n<10; n++) {                             # iterate through max 9 components of version
+      $n=tolower($n)                                   # ignore case for sorting
+      if ($n == "")                 $n="0"             # treat non existing parts as 0
+      if ($n ~ /^p[0-9]/)           $n=substr($n, 2)   # old ruby -p notation
+      if ($n ~ /^[0-9](rc|b)/)      $n=substr($n, 1, 1)". "substr($n, 2)   # old jruby 0RC1 notation
+      if (n == 1 && $n ~ /^[0-9]/)  $n="zzz."$n        # first group must be a string
+      if (n > 1 && $n ~ /^[a-z]/)   $n=" "$n           # names go before numbers thanks to space
+    }
+    print $0"\t"original                               # print the transformed version and original separated by \t
+                                                       # so we can extract original after sorting
+  }'
+++ awk '-F[.-]' -v OFS=. '{                   # split on "." and "-", merge back with "."
+    original=$0                                        # save original to preserve it before the line is changed
+    for (n=1; n<10; n++) {                             # iterate through max 9 components of version
+      $n=tolower($n)                                   # ignore case for sorting
+      if ($n == "")                 $n="0"             # treat non existing parts as 0
+      if ($n ~ /^p[0-9]/)           $n=substr($n, 2)   # old ruby -p notation
+      if ($n ~ /^[0-9](rc|b)/)      $n=substr($n, 1, 1)". "substr($n, 2)   # old jruby 0RC1 notation
+      if (n == 1 && $n ~ /^[0-9]/)  $n="zzz."$n        # first group must be a string
+      if (n > 1 && $n ~ /^[a-z]/)   $n=" "$n           # names go before numbers thanks to space
+    }
+    print $0"\t"original                               # print the transformed version and original separated by \t
+                                                       # so we can extract original after sorting
+  }'
+++ LC_ALL=C
+++ sort -t. -k 1,1d -k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n
+++ awk '-F\t' '{print $2}'
++ first=1.8.5
++ case "$2" in
++ [[ 1.8.5 == \h\e\a\d ]]
++ [[ 1.8.5 == \2\.\6\.\0 ]]
++ return 1
++ rvm_archive_extension=tar.bz2
++ true
++ __rvm_select_version_variables
++ case "$rvm_ruby_version" in
++ rvm_ruby_release_version=2
++ rvm_ruby_major_version=2.6
++ rvm_ruby_major_version=6
++ rvm_ruby_minor_version=0
++ __rvm_select_default_variables
++ [[ ruby != ext ]]
++ rvm_ruby_package_name=ruby-2.6.0
++ rvm_ruby_home=/home/sec/.rvm/rubies/ruby-2.6.0
++ rvm_ruby_binary=/home/sec/.rvm/rubies/ruby-2.6.0/bin/ruby
++ rvm_ruby_irbrc=/home/sec/.rvm/rubies/ruby-2.6.0/.irbrc
++ [[ system == \r\u\b\y ]]
++ __rvm_gemset_select
++ __rvm_gemset_select_only
++ rvm_ruby_gem_home=/home/sec/.rvm/gems/ruby-2.6.0
++ : rvm_ignore_gemsets_flag:0:
++ ((  rvm_ignore_gemsets_flag  ))
++ rvm_ruby_global_gems_path=/home/sec/.rvm/gems/ruby-2.6.0@global
++ __rvm_gemset_handle_default
++ rvm_gemset_name=@global@
++ rvm_gemset_name=@global@
++ rvm_gemset_name=global
++ [[ -z global ]]
++ rvm_ruby_gem_home=/home/sec/.rvm/gems/ruby-2.6.0@global
++ [[ global == \g\l\o\b\a\l ]]
++ rvm_ruby_gem_path=/home/sec/.rvm/gems/ruby-2.6.0@global
++ [[ -n global ]]
++ rvm_env_string=ruby-2.6.0@global
++ true
++ __rvm_gemset_select_validation
++ [[ ! -d /home/sec/.rvm/gems/ruby-2.6.0@global ]]
++ ((  0 == 1  ))
++ case "${rvm_gemset_name}" in
++ typeset rvm_ruby_gem_home_254
++ [[ -n '' ]]
++ rvm_ruby_gem_home_254=/home/sec/.rvm/gems/ruby-2.6.0@global
++ [[ /home/sec/.rvm/gems/ruby-2.6.0@global != \/\h\o\m\e\/\s\e\c\/\.\r\v\m\/\g\e\m\s\/\r\u\b\y\-\2\.\6\.\0\@\g\l\o\b\a\l ]]
++ rvm_ruby_selected_flag=1
++ [[ system == ruby ]]
++ __rvm_use_
++ rvm_ruby_home=/home/sec/.rvm/rubies/ruby-2.6.0
++ [[ ! -d /home/sec/.rvm/rubies/ruby-2.6.0 ]]
++ __rvm_gemset_use_ensure
++ [[ ! -d /home/sec/.rvm/gems/ruby-2.6.0@global ]]
++ [[ -n '' ]]
++ export GEM_HOME GEM_PATH MY_RUBY_HOME RUBY_VERSION IRBRC
++ GEM_HOME=/home/sec/.rvm/gems/ruby-2.6.0@global
++ GEM_PATH=/home/sec/.rvm/gems/ruby-2.6.0@global
++ MY_RUBY_HOME=/home/sec/.rvm/rubies/ruby-2.6.0
++ RUBY_VERSION=ruby-2.6.0
++ IRBRC=/home/sec/.rvm/rubies/ruby-2.6.0/.irbrc
++ unset BUNDLE_PATH
++ [[ maglev == \r\u\b\y ]]
++ [[ -n /home/sec/.rvm/rubies/ruby-2.6.0/.irbrc ]]
++ ((  0 >= 2 && 1 == 0  ))
++ ((  0 == 1 && 0 == 1  ))
++ [[ /home/sec/.rvm/gems/ruby-2.6.0@global != \/\h\o\m\e\/\s\e\c\/\.\r\v\m\/\g\e\m\s\/\r\u\b\y\-\2\.\6\.\0\@\g\l\o\b\a\l ]]
++ __path_prefix=/home/sec/.rvm/gems/ruby-2.6.0@global/bin:/home/sec/.rvm/rubies/ruby-2.6.0/bin:/home/sec/.rvm/bin
++ __path_suffix=
++ __rvm_use_common
++ [[ -z ruby-2.6.0 ]]
++ export rvm_ruby_string
++ [[ -z global ]]
++ export rvm_gemset_name
++ typeset __save_PATH
++ __rvm_remove_rvm_from_path
++ typeset local_rvm_path
++ __rvm_remove_from_path '/home/sec/.rvm/*'
++ export PATH
++ typeset _value
++ _value='/home/sec/.rvm/*'
++ [[ /home/sec/.rvm/gems/ruby-2.6.0/bin:/home/sec/.rvm/gems/ruby-2.6.0@global/bin:/home/sec/.rvm/rubies/ruby-2.6.0/bin:/home/sec/.rvm/bin:/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools == *\/\/* ]]
++ [[ /home/sec/.rvm/gems/ruby-2.6.0/bin:/home/sec/.rvm/gems/ruby-2.6.0@global/bin:/home/sec/.rvm/rubies/ruby-2.6.0/bin:/home/sec/.rvm/bin:/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools == *\/\:* ]]
++ __rvm_string_match :/home/sec/.rvm/gems/ruby-2.6.0/bin:/home/sec/.rvm/gems/ruby-2.6.0@global/bin:/home/sec/.rvm/rubies/ruby-2.6.0/bin:/home/sec/.rvm/bin:/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools: '*:/home/sec/.rvm/*:*'
++ typeset _string
++ _string=:/home/sec/.rvm/gems/ruby-2.6.0/bin:/home/sec/.rvm/gems/ruby-2.6.0@global/bin:/home/sec/.rvm/rubies/ruby-2.6.0/bin:/home/sec/.rvm/bin:/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools:
++ shift
++ ((  1  ))
++ case "${_string}" in
++ return 0
++ typeset -a _path
++ _path=()
++ __rvm_custom_separated_array _path : /home/sec/.rvm/gems/ruby-2.6.0/bin:/home/sec/.rvm/gems/ruby-2.6.0@global/bin:/home/sec/.rvm/rubies/ruby-2.6.0/bin:/home/sec/.rvm/bin:/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools
++ typeset IFS
++ IFS=:
++ [[ -n '' ]]
++ eval '_path+=( $3 )'
+++ _path+=($3)
++ __rvm_remove_from_array _path '/home/sec/.rvm/*' /home/sec/.rvm/gems/ruby-2.6.0/bin /home/sec/.rvm/gems/ruby-2.6.0@global/bin /home/sec/.rvm/rubies/ruby-2.6.0/bin /home/sec/.rvm/bin /opt/AIK-Linux-v3.3-ALL /home/sec/anaconda3/bin /home/sec/.npm-global/bin /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games /snap/bin /home/sec/.dotnet/tools
++ typeset _array_name _iterator _search
++ typeset -a _temp_array
++ _array_name=_path
++ _search='/home/sec/.rvm/*'
++ shift 2
++ _temp_array=()
++ for _iterator in "$@"
++ __rvm_string_match /home/sec/.rvm/gems/ruby-2.6.0/bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/home/sec/.rvm/gems/ruby-2.6.0/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ return 0
++ for _iterator in "$@"
++ __rvm_string_match /home/sec/.rvm/gems/ruby-2.6.0@global/bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/home/sec/.rvm/gems/ruby-2.6.0@global/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ return 0
++ for _iterator in "$@"
++ __rvm_string_match /home/sec/.rvm/rubies/ruby-2.6.0/bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/home/sec/.rvm/rubies/ruby-2.6.0/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ return 0
++ for _iterator in "$@"
++ __rvm_string_match /home/sec/.rvm/bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/home/sec/.rvm/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ return 0
++ for _iterator in "$@"
++ __rvm_string_match /opt/AIK-Linux-v3.3-ALL '/home/sec/.rvm/*'
++ typeset _string
++ _string=/opt/AIK-Linux-v3.3-ALL
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /home/sec/anaconda3/bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/home/sec/anaconda3/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /home/sec/.npm-global/bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/home/sec/.npm-global/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /usr/local/sbin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/usr/local/sbin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /usr/local/bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/usr/local/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /usr/sbin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/usr/sbin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /usr/bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/usr/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /sbin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/sbin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /usr/games '/home/sec/.rvm/*'
++ typeset _string
++ _string=/usr/games
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /usr/local/games '/home/sec/.rvm/*'
++ typeset _string
++ _string=/usr/local/games
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /snap/bin '/home/sec/.rvm/*'
++ typeset _string
++ _string=/snap/bin
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ for _iterator in "$@"
++ __rvm_string_match /home/sec/.dotnet/tools '/home/sec/.rvm/*'
++ typeset _string
++ _string=/home/sec/.dotnet/tools
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ _temp_array+=("$_iterator")
++ eval '_path=( "${_temp_array[@]}" )'
+++ _path=("${_temp_array[@]}")
++ __rvm_join_array PATH : _path
++ typeset IFS
++ IFS=:
++ eval 'PATH="${_path[*]}"'
+++ PATH=/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools
++ __rvm_remove_from_path /home/sec/.rvm/bin
++ export PATH
++ typeset _value
++ _value=/home/sec/.rvm/bin
++ [[ /opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools == *\/\/* ]]
++ [[ /opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools == *\/\:* ]]
++ __rvm_string_match :/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools: '*:/home/sec/.rvm/bin:*'
++ typeset _string
++ _string=:/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools:
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
+++ __rvm_which rvm
++ local_rvm_path=
++ builtin hash -r
++ __save_PATH=/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools
++ [[ -n '' ]]
++ PATH=/home/sec/.rvm/gems/ruby-2.6.0@global/bin:/home/sec/.rvm/rubies/ruby-2.6.0/bin:/home/sec/.rvm/bin:/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools
++ export PATH
++ builtin hash -r
++ [[ ruby-2.6.0 != \s\y\s\t\e\m ]]
++ case "${rvm_rvmrc_flag:-0}" in
++ typeset environment_id
+++ __rvm_env_string
+++ typeset _string
+++ _string=/home/sec/.rvm/gems/ruby-2.6.0@global
+++ _string=ruby-2.6.0@global
+++ printf %b 'ruby-2.6.0@global\n'
++ environment_id=ruby-2.6.0@global
++ ((  0 == 1  ))
++ rvm_default_flag=0
++ [[ -n '' ]]
++ rvm_hook=after_use
++ source /home/sec/.rvm/scripts/hook
+++ typeset old_rvm_verbose_flag old_rvm_debug_flag
+++ old_rvm_verbose_flag=0
+++ old_rvm_debug_flag=0
+++ typeset rvm_verbose_flag rvm_debug_flag hooks
+++ true rvm_verbose_flag:0 rvm_hooks_path:/home/sec/.rvm/hooks rvm_debug_flag:0 rvm_hook:after_use
+++ [[ -n after_use ]]
+++ hooks=()
+++ [[ -d /home/sec/.rvm/hooks ]]
+++ hooks+=("$rvm_hooks_path")
+++ [[ /home/sec/.rvm/hooks != \/\h\o\m\e\/\s\e\c\/\.\r\v\m\/\h\o\o\k\s ]]
+++ [[ -n /home/sec/.rvm/hooks ]]
+++ __rvm_read_lines _hooks_list /dev/fd/63
+++ typeset IFS
+++ IFS='
+'
+++ [[ /dev/fd/63 == \- ]]
+++ eval '_hooks_list=( $( \command \cat "${2:--}" ) )'
++++ __rvm_find -L /home/sec/.rvm/hooks -iname 'after_use*' -type f
++++ _hooks_list=($( \command \cat "${2:--}" ))
+++++ command cat /dev/fd/63
+++++ cat /dev/fd/63
+++ for hook in "${_hooks_list[@]}"
+++ [[ -x /home/sec/.rvm/hooks/after_use_rbx_opts ]]
+++ [[ after_use_rbx_opts == \a\f\t\e\r\_\u\s\e ]]
+++ for hook in "${_hooks_list[@]}"
+++ [[ -x /home/sec/.rvm/hooks/after_use_textmate ]]
+++ [[ after_use_textmate == \a\f\t\e\r\_\u\s\e ]]
+++ for hook in "${_hooks_list[@]}"
+++ [[ -x /home/sec/.rvm/hooks/after_use_maglev ]]
+++ [[ /home/sec/.rvm/hooks/after_use_maglev == \/\h\o\m\e\/\s\e\c\/\.\r\v\m\/\h\o\o\k\s\/* ]]
+++ rvm_debug 'Running /home/sec/.rvm/hooks/after_use_maglev'
+++ ((  0  ))
+++ return 0
+++ __rvm_conditionally_do_with_env . /home/sec/.rvm/hooks/after_use_maglev
+++ ((  __rvm_env_loaded > 0  ))
+++ . /home/sec/.rvm/hooks/after_use_maglev
++++ . /home/sec/.rvm/scripts/functions/hooks/maglev
++++ [[ ruby-2.6.0 =~ maglev ]]
+++ for hook in "${_hooks_list[@]}"
+++ [[ -x /home/sec/.rvm/hooks/after_use_home_bin ]]
+++ [[ after_use_home_bin == \a\f\t\e\r\_\u\s\e ]]
+++ for hook in "${_hooks_list[@]}"
+++ [[ -x /home/sec/.rvm/hooks/after_use_jruby_opts ]]
+++ [[ after_use_jruby_opts == \a\f\t\e\r\_\u\s\e ]]
+++ for hook in "${_hooks_list[@]}"
+++ [[ -x /home/sec/.rvm/hooks/after_use_jruby ]]
+++ [[ after_use_jruby == \a\f\t\e\r\_\u\s\e ]]
+++ for hook in "${_hooks_list[@]}"
+++ [[ -x /home/sec/.rvm/hooks/after_use_current ]]
+++ [[ after_use_current == \a\f\t\e\r\_\u\s\e ]]
+++ unset rvm_hook hooks _hooks_list hook
++ return 0
++ shift
++ run_gem_wrappers regenerate
++ gem_install gem-wrappers
++ typeset gem_name gem_version version_check
++ gem_version=
++ __rvm_parse_gems_args gem-wrappers
++ typeset gem=gem-wrappers
++ __rvm_string_match gem-wrappers '*.gem$'
++ typeset _string
++ _string=gem-wrappers
++ shift
++ ((  1  ))
++ case "${_string}" in
++ shift
++ ((  0  ))
++ return 1
++ gem_name=gem-wrappers
++ case "$gem" in
++ [[ -z '' ]]
++ __rvm_db gem_gem-wrappers_version gem_version
++ typeset value key variable
++ key=gem_gem-wrappers_version
++ variable=gem_version
++ value=
++ [[ -f /home/sec/.rvm/user/db ]]
+++ __rvm_db_ /home/sec/.rvm/user/db gem_gem-wrappers_version
+++ typeset __db __key __value
+++ __db=/home/sec/.rvm/user/db
+++ __key=gem_gem-wrappers_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sec/.rvm/user/db gem_gem-wrappers_version
+++ [[ -f /home/sec/.rvm/user/db ]]
+++ __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++ value=
++ [[ -z '' ]]
++ [[ -f /home/sec/.rvm/config/db ]]
+++ __rvm_db_ /home/sec/.rvm/config/db gem_gem-wrappers_version
+++ typeset __db __key __value
+++ __db=/home/sec/.rvm/config/db
+++ __key=gem_gem-wrappers_version
+++ shift 2
+++ __value=
+++ case "${__value}" in
+++ __rvm_db_get /home/sec/.rvm/config/db gem_gem-wrappers_version
+++ [[ -f /home/sec/.rvm/config/db ]]
+++ __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
+++ sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++ value='>=1.4.0'
++ [[ -n >=1.4.0 ]]
++ [[ -n gem_version ]]
++ eval 'gem_version='\''>=1.4.0'\'''
+++ gem_version='>=1.4.0'
++ true
++ ((  0 == 0  ))
++ is_gem_installed
++ typeset gem_spec
++ gem_spec='gem '\''gem-wrappers'\'''
++ [[ -n >=1.4.0 ]]
++ gem_spec+=', '\''>=1.4.0'\'''
++ version_check=1.4.0
++ ls -ld /home/sec/.rvm/gems/ruby-2.6.0@global/gems/gem-wrappers-1.4.0
++ rvm_log 'gem gem-wrappers >=1.4.0 is already installed'
++ [[ '' == 1 ]]
++ printf %b 'gem gem-wrappers >=1.4.0 is already installed\n'
++ return 0
++ gem wrappers regenerate

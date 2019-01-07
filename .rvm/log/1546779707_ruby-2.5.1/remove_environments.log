@@ -1,0 +1,52 @@
++__rvm_remove_path_list_remove:2> typeset __item
++__rvm_remove_path_list_remove:3> __item=/home/sec/.rvm/environments/ruby-2.5.1
++__rvm_remove_path_list_remove:5> printf 'Removing /home/sec/.rvm/environments/ruby-2.5.1 - '
+Removing /home/sec/.rvm/environments/ruby-2.5.1 - +__rvm_remove_path_list_remove:6> __rvm_rm_rf /home/sec/.rvm/environments/ruby-2.5.1
++__rvm_rm_rf:2> __rvm_rm_rf_verbose /home/sec/.rvm/environments/ruby-2.5.1
++__rvm_rm_rf_verbose:2> typeset target
++__rvm_rm_rf_verbose:3> target=/home/sec/.rvm/environments/ruby-2.5.1 
++__rvm_rm_rf_verbose:7> [[ -n 5.5.1 ]]
++__rvm_rm_rf_verbose:9> setopt extendedglob
++__rvm_rm_rf_verbose:17> case /home/sec/.rvm/environments/ruby-2.5.1 (*(/|.)@(|/Applications|/Developer|/Guides|/Information|/Library|/Network|/System|/User|/Users|/Volumes|/backups|/bdsm|/bin|/boot|/cores|/data|/dev|/etc|/home|/lib|/lib64|/mach_kernel|/media|/misc|/mnt|/net|/opt|/private|/proc|/root|/sbin|/selinux|/srv|/sys|/tmp|/usr|/var))
++__rvm_rm_rf_verbose:17> case /home/sec/.rvm/environments/ruby-2.5.1 (*)
++__rvm_rm_rf_verbose:24> [[ -z /home/sec/.rvm/environments/ruby-2.5.1 ]]
++__rvm_rm_rf_verbose:29> [[ -d /home/sec/.rvm/environments/ruby-2.5.1 ]]
++__rvm_rm_rf_verbose:38> [[ -f /home/sec/.rvm/environments/ruby-2.5.1 || -L /home/sec/.rvm/environments/ruby-2.5.1 ]]
++__rvm_rm_rf_verbose:40> rm -f /home/sec/.rvm/environments/ruby-2.5.1
++__rvm_rm_rf_verbose:51> true
++__rvm_remove_path_list_remove:6> printf 'ok\n'
+ok
++__rvm_remove_path_list_remove:3> __item=/home/sec/.rvm/environments/ruby-2.5.1@global
++__rvm_remove_path_list_remove:5> printf 'Removing /home/sec/.rvm/environments/ruby-2.5.1@global - '
+Removing /home/sec/.rvm/environments/ruby-2.5.1@global - +__rvm_remove_path_list_remove:6> __rvm_rm_rf /home/sec/.rvm/environments/ruby-2.5.1@global
++__rvm_rm_rf:2> __rvm_rm_rf_verbose /home/sec/.rvm/environments/ruby-2.5.1@global
++__rvm_rm_rf_verbose:2> typeset target
++__rvm_rm_rf_verbose:3> target=/home/sec/.rvm/environments/ruby-2.5.1@global 
++__rvm_rm_rf_verbose:7> [[ -n 5.5.1 ]]
++__rvm_rm_rf_verbose:9> setopt extendedglob
++__rvm_rm_rf_verbose:17> case /home/sec/.rvm/environments/ruby-2.5.1@global (*(/|.)@(|/Applications|/Developer|/Guides|/Information|/Library|/Network|/System|/User|/Users|/Volumes|/backups|/bdsm|/bin|/boot|/cores|/data|/dev|/etc|/home|/lib|/lib64|/mach_kernel|/media|/misc|/mnt|/net|/opt|/private|/proc|/root|/sbin|/selinux|/srv|/sys|/tmp|/usr|/var))
++__rvm_rm_rf_verbose:17> case /home/sec/.rvm/environments/ruby-2.5.1@global (*)
++__rvm_rm_rf_verbose:24> [[ -z /home/sec/.rvm/environments/ruby-2.5.1@global ]]
++__rvm_rm_rf_verbose:29> [[ -d /home/sec/.rvm/environments/ruby-2.5.1@global ]]
++__rvm_rm_rf_verbose:38> [[ -f /home/sec/.rvm/environments/ruby-2.5.1@global || -L /home/sec/.rvm/environments/ruby-2.5.1@global ]]
++__rvm_rm_rf_verbose:40> rm -f /home/sec/.rvm/environments/ruby-2.5.1@global
++__rvm_rm_rf_verbose:51> true
++__rvm_remove_path_list_remove:6> printf 'ok\n'
+ok
++__rvm_remove_path_list_remove:3> __item=/home/sec/.rvm/environments/ruby-2.5.1@untitled1
++__rvm_remove_path_list_remove:5> printf 'Removing /home/sec/.rvm/environments/ruby-2.5.1@untitled1 - '
+Removing /home/sec/.rvm/environments/ruby-2.5.1@untitled1 - +__rvm_remove_path_list_remove:6> __rvm_rm_rf /home/sec/.rvm/environments/ruby-2.5.1@untitled1
++__rvm_rm_rf:2> __rvm_rm_rf_verbose /home/sec/.rvm/environments/ruby-2.5.1@untitled1
++__rvm_rm_rf_verbose:2> typeset target
++__rvm_rm_rf_verbose:3> target=/home/sec/.rvm/environments/ruby-2.5.1@untitled1 
++__rvm_rm_rf_verbose:7> [[ -n 5.5.1 ]]
++__rvm_rm_rf_verbose:9> setopt extendedglob
++__rvm_rm_rf_verbose:17> case /home/sec/.rvm/environments/ruby-2.5.1@untitled1 (*(/|.)@(|/Applications|/Developer|/Guides|/Information|/Library|/Network|/System|/User|/Users|/Volumes|/backups|/bdsm|/bin|/boot|/cores|/data|/dev|/etc|/home|/lib|/lib64|/mach_kernel|/media|/misc|/mnt|/net|/opt|/private|/proc|/root|/sbin|/selinux|/srv|/sys|/tmp|/usr|/var))
++__rvm_rm_rf_verbose:17> case /home/sec/.rvm/environments/ruby-2.5.1@untitled1 (*)
++__rvm_rm_rf_verbose:24> [[ -z /home/sec/.rvm/environments/ruby-2.5.1@untitled1 ]]
++__rvm_rm_rf_verbose:29> [[ -d /home/sec/.rvm/environments/ruby-2.5.1@untitled1 ]]
++__rvm_rm_rf_verbose:38> [[ -f /home/sec/.rvm/environments/ruby-2.5.1@untitled1 || -L /home/sec/.rvm/environments/ruby-2.5.1@untitled1 ]]
++__rvm_rm_rf_verbose:40> rm -f /home/sec/.rvm/environments/ruby-2.5.1@untitled1
++__rvm_rm_rf_verbose:51> true
++__rvm_remove_path_list_remove:6> printf 'ok\n'
+ok

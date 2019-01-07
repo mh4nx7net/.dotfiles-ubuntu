@@ -1,0 +1,235 @@
+{
+	"name": "zsh-debug",
+	"displayName": "Zsh Debug",
+	"version": "0.1.0",
+	"preview": true,
+	"publisher": "rogalmic",
+	"description": "A debugger extension for zsh scripts (using zshdb).",
+	"author": {
+		"name": "Michal Rogalinski",
+		"email": "rogalinsky@gmail.com"
+	},
+	"license": "MIT",
+	"keywords": [
+		"multi-root ready"
+	],
+	"engines": {
+		"vscode": "^1.29.0",
+		"node": "^10.2.0"
+	},
+	"icon": "images/zsh-debug-icon.png",
+	"categories": [
+		"Debuggers"
+	],
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rogalmic/vscode-zsh-debug.git"
+	},
+	"bugs": {
+		"url": "https://github.com/rogalmic/vscode-zsh-debug/issues"
+	},
+	"badges": [
+		{
+			"url": "https://img.shields.io/github/downloads/rogalmic/vscode-zsh-debug/latest/total.svg",
+			"href": "https://github.com/rogalmic/vscode-zsh-debug/releases/latest",
+			"description": "Download latest beta release (master branch)"
+		},
+		{
+			"url": "https://img.shields.io/github/stars/rogalmic/vscode-zsh-debug.svg?style=social&label=Stars",
+			"href": "https://github.com/rogalmic/vscode-zsh-debug/stargazers",
+			"description": "Star the project in github"
+		},
+		{
+			"url": "https://img.shields.io/badge/paypal-donate-blue.svg",
+			"href": "https://paypal.me/rogalmic",
+			"description": "Donate some $ to keep project going"
+		}
+	],
+	"dependencies": {
+		"vscode-debugadapter": "1.32.1",
+		"vscode-debugprotocol": "1.32.0",
+		"child-process": "^1.0.2",
+		"npm-which": "^3.0.1"
+	},
+	"devDependencies": {
+		"@types/mocha": "5.2.5",
+		"@types/node": "10.11.3",
+		"jsdoctest": "1.7.1",
+		"mocha": "5.2.0",
+		"standard-version": "^4.4.0",
+		"tslint": "5.11.0",
+		"typescript": "3.1.1",
+		"vsce": "1.51.1",
+		"vscode": "1.1.21",
+		"vscode-debugadapter-testsupport": "1.32.0"
+	},
+	"scripts": {
+		"prepublish": "tsc -p ./src",
+		"compile": "tsc -p ./src",
+		"tslint": "tslint ./src/**/*.ts",
+		"watch": "tsc -w -p ./src",
+		"test": "mocha -u tdd ./out/tests/; node_modules/.bin/mocha --require jsdoctest out/zshRuntime.js out/handlePath.js",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"package": "vsce package",
+		"publish": "vsce publish",
+		"release": "standard-version"
+	},
+	"main": "./out/extension",
+	"activationEvents": [
+		"onDebug",
+		"onCommand:extension.zsh-debug.getProgramName",
+		"onCommand:extension.zsh-debug.selectProgramName"
+	],
+	"contributes": {
+		"breakpoints": [
+			{
+				"language": "shellscript"
+			}
+		],
+		"debuggers": [
+			{
+				"type": "zshdb",
+				"label": "Zsh Debug",
+				"program": "./out/zshDebug.js",
+				"runtime": "node",
+				"configurationAttributes": {
+					"launch": {
+						"// `type`, `request` and `name` are required implicitly.": null,
+						"required": [
+							"program"
+						],
+						"properties": {
+							"args": {
+								"// type: Array<string> -> warning `Incorrect type. Expected Array<string>` in launch.json": null,
+								"description": "Command line arguments. (i.e. [\"--opt\", \"arg\"])",
+								"default": []
+							},
+							"cwd": {
+								"type": "string",
+								"description": "Working directory. (i.e. `cd $cwd; zshdb <options> $program` will be executed internally).",
+								"default": "${workspaceFolder}"
+							},
+							"program": {
+								"type": "string",
+								"description": "Absolute path to a script. See also: https://code.visualstudio.com/docs/editor/variables-reference",
+								"default": "${file}"
+							},
+							"pathZsh": {
+								"type": "string",
+								"description": "Specify absolute path to zsh. Refer to https://github.com/rogalmic/vscode-zsh-debug/blob/master/README.md#usage",
+								"default": ""
+							},
+							"pathZshdb": {
+								"type": "string",
+								"description": "Specify absolute path to zshdb (on Windows, path in Linux Subsystem).",
+								"default": "/usr/local/bin/zshdb"
+							},
+							"pathZshdbLib": {
+								"type": "string",
+								"description": "Specify absolute path to zshdb libs (on Windows, path in Linux Subsystem).",
+								"default": "/usr/share/zshdb"
+							},
+							"pathCat": {
+								"type": "string",
+								"description": "Specify absolute path to cat (on Windows, path in Linux Subsystem).",
+								"default": "/usr/bin/cat"
+							},
+							"pathMkfifo": {
+								"type": "string",
+								"description": "Specify absolute path to mkfifo (on Windows, path in Linux Subsystem).",
+								"default": "/usr/bin/mkfifo"
+							},
+							"pathPkill": {
+								"type": "string",
+								"description": "Specify absolute path to pkill (on Windows, path in Linux Subsystem). On macOS, please use /usr/bin/pkill instead of /usr/local/bin/pkill, otherwise vscode crashes. see https://github.com/rogalmic/vscode-zsh-debug/wiki/macOS:-avoid-use-of--usr-local-bin-pkill for details.",
+								"default": "/usr/local/bin/pkill"
+							},
+							"showDebugOutput": {
+								"type": "boolean",
+								"description": "Defines if zshdb output will be visible together with script output.",
+								"default": true
+							},
+							"trace": {
+								"type": "boolean",
+								"description": "Enable logging of the Debug Adapter Protocol.",
+								"default": true
+							},
+							"terminalKind": {
+								"enum": [
+									"integrated",
+									"external"
+								],
+								"description": "Can be set to 'integrated' or 'external'.",
+								"default": "integrated"
+							}
+						}
+					}
+				},
+				"// Template for initial launch.json": null,
+				"// Added when: launch.json is missing && (": null,
+				"//   Add configuration... (in debug pane) -> Zsh Debug ||": null,
+				"//   >Debug: Open launch.json -> Zsh Debug ||": null,
+				"//   (>Debug: Start Debugging -> Zsh Debug && file type is not shellscript)": null,
+				"// )": null,
+				"initialConfigurations": [
+					{
+						"type": "zshdb",
+						"request": "launch",
+						"name": "Zsh-Debug (simplest configuration)",
+						"program": "${file}"
+					}
+				],
+				"// Added when select 'Add configuration...' -> 'Zsh Debug' in debug pane": null,
+				"// `label` is shown in IntelliSense and `name` is shown in DEBUG side-bar.": null,
+				"configurationSnippets": [
+					{
+						"label": "Zsh-Debug (hardcoded script name)",
+						"description": "Debug a zsh script (specify the path to the script in launch.json)",
+						"body": {
+							"type": "zshdb",
+							"request": "launch",
+							"name": "Zsh-Debug (hardcoded script name)",
+							"cwd": "^\"\\${workspaceFolder}\"",
+							"program": "^\"\\${workspaceFolder}/path/to/script.sh\"",
+							"args": []
+						}
+					},
+					{
+						"label": "Zsh-Debug (select script from list of sh files)",
+						"description": "Debug a zsh script (select script from the list of sh files before starting debug)",
+						"body": {
+							"type": "zshdb",
+							"request": "launch",
+							"name": "Zsh-Debug (select script from list of sh files)",
+							"cwd": "^\"\\${workspaceFolder}\"",
+							"program": "^\"\\${command:SelectScriptName}\"",
+							"args": []
+						}
+					},
+					{
+						"label": "Zsh-Debug (type in script name)",
+						"description": "Debug a zsh script (specify the script path before starting debug)",
+						"body": {
+							"type": "zshdb",
+							"request": "launch",
+							"name": "Zsh-Debug (type in script name)",
+							"cwd": "^\"\\${workspaceFolder}\"",
+							"program": "^\"\\${command:AskForScriptName}\"",
+							"args": []
+						}
+					}
+				],
+				"variables": {
+					"AskForScriptName": "extension.zsh-debug.getProgramName",
+					"SelectScriptName": "extension.zsh-debug.selectProgramName"
+				}
+			}
+		]
+	},
+	"__metadata": {
+		"id": "d0bce92a-e36a-459d-bb62-1e96eaf29001",
+		"publisherId": "60aabfd6-4033-4422-8bfe-e34a659226cb",
+		"publisherDisplayName": "rogalmic"
+	}
+}

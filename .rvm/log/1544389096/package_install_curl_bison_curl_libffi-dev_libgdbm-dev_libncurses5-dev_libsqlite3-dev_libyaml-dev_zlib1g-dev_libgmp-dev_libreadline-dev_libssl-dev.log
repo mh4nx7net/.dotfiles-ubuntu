@@ -1,0 +1,180 @@
+[2018-12-10 03:58:19] requirements_debian_libs_install
+requirements_debian_libs_install () 
+{ 
+    __rvm_try_sudo apt-get --no-install-recommends --yes install "$@" || return $?
+}
+current path: /home/sec/Documents/appdesktop/winmod
+PATH=/opt/anaconda3/bin:/opt/anaconda3/bin:/home/sec/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools:/home/sec/.rvm/bin:/home/sec/.rvm/bin:/home/sec/.rvm/bin
+command(13): requirements_debian_libs_install curl bison curl libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libyaml-dev zlib1g-dev libgmp-dev libreadline-dev libssl-dev
++ __rvm_try_sudo apt-get --no-install-recommends --yes install curl bison curl libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libyaml-dev zlib1g-dev libgmp-dev libreadline-dev libssl-dev
++ typeset -a command_to_run
++ typeset sudo_path sbin_path missing_paths
++ command_to_run=("$@")
++ ((  UID == 0  ))
++ case "$rvm_autolibs_flag_number" in
++ is_a_function __rvm_sudo
++ typeset -f __rvm_sudo
++ missing_paths=
++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
++ [[ -d /sbin ]]
++ [[ :/opt/anaconda3/bin:/opt/anaconda3/bin:/home/sec/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools:/home/sec/.rvm/bin:/home/sec/.rvm/bin:/home/sec/.rvm/bin: != *\:\/\s\b\i\n\:* ]]
++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
++ [[ -d /usr/sbin ]]
++ [[ :/opt/anaconda3/bin:/opt/anaconda3/bin:/home/sec/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools:/home/sec/.rvm/bin:/home/sec/.rvm/bin:/home/sec/.rvm/bin: != *\:\/\u\s\r\/\s\b\i\n\:* ]]
++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
++ [[ -d /usr/local/sbin ]]
++ [[ :/opt/anaconda3/bin:/opt/anaconda3/bin:/home/sec/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools:/home/sec/.rvm/bin:/home/sec/.rvm/bin:/home/sec/.rvm/bin: != *\:\/\u\s\r\/\l\o\c\a\l\/\s\b\i\n\:* ]]
++ [[ -n '' ]]
++ command_to_run=(__rvm_sudo -p "%p password required for '$*': " "${command_to_run[@]}")
++ __rvm_sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install curl bison curl libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libyaml-dev zlib1g-dev libgmp-dev libreadline-dev libssl-dev'\'': ' apt-get --no-install-recommends --yes install curl bison curl libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libyaml-dev zlib1g-dev libgmp-dev libreadline-dev libssl-dev
++ command sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install curl bison curl libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libyaml-dev zlib1g-dev libgmp-dev libreadline-dev libssl-dev'\'': ' apt-get --no-install-recommends --yes install curl bison curl libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libyaml-dev zlib1g-dev libgmp-dev libreadline-dev libssl-dev
++ sudo -p '%p password required for '\''apt-get --no-install-recommends --yes install curl bison curl libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libyaml-dev zlib1g-dev libgmp-dev libreadline-dev libssl-dev'\'': ' apt-get --no-install-recommends --yes install curl bison curl libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libyaml-dev zlib1g-dev libgmp-dev libreadline-dev libssl-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  gyp libjs-async libjs-inherits libjs-is-typedarray libjs-node-uuid
+  libjs-underscore libuv1-dev node-abbrev node-ajv node-ansi
+  node-ansi-color-table node-ansi-regex node-ansi-styles node-ansistyles
+  node-aproba node-archy node-are-we-there-yet node-async node-aws-sign2
+  node-balanced-match node-block-stream node-bluebird node-boom
+  node-brace-expansion node-builtin-modules node-camelcase node-caseless
+  node-chalk node-cliui node-clone node-co node-color-convert node-color-name
+  node-combined-stream node-concat-map node-config-chain
+  node-console-control-strings node-cookie-jar node-copy-concurrently
+  node-core-util-is node-cross-spawn node-cryptiles node-decamelize
+  node-decompress-response node-deep-extend node-defaults node-delayed-stream
+  node-delegates node-detect-indent node-duplexer3 node-editor node-encoding
+  node-escape-string-regexp node-execa node-find-up node-forever-agent
+  node-form-data node-fs-vacuum node-fs-write-stream-atomic node-fs.realpath
+  node-fstream node-fstream-ignore node-gauge node-get-caller-file
+  node-get-stream node-github-url-from-git node-glob node-got node-graceful-fs
+  node-har-schema node-har-validator node-has-flag node-has-symbol-support-x
+  node-has-to-string-tag-x node-has-unicode node-hawk node-hoek
+  node-hosted-git-info node-iconv-lite node-iferr node-import-lazy
+  node-imurmurhash node-inflight node-inherits node-ini node-invert-kv
+  node-is-builtin-module node-is-npm node-is-object node-is-plain-obj
+  node-is-retry-allowed node-is-stream node-is-typedarray node-isarray
+  node-isexe node-isstream node-isurl node-json-stable-stringify
+  node-json-stringify-safe node-jsonify node-jsonparse node-jsonstream
+  node-latest-version node-lazy-property node-lcid node-locate-path
+  node-lockfile node-lowercase-keys node-lru-cache node-mem node-mime
+  node-mimic-fn node-mimic-response node-minimatch node-minimist node-mkdirp
+  node-move-concurrently node-mute-stream node-node-uuid node-nopt
+  node-normalize-package-data node-npm-run-path node-npmlog node-object-assign
+  node-once node-opener node-os-locale node-osenv node-p-cancelable
+  node-p-finally node-p-limit node-p-locate node-p-timeout node-package-json
+  node-path-exists node-path-is-absolute node-path-is-inside
+  node-performance-now node-prepend-http node-process-nextick-args
+  node-promise-inflight node-proto-list node-pseudomap node-punycode node-qs
+  node-rc node-read node-read-package-json node-readable-stream
+  node-registry-auth-token node-registry-url node-request
+  node-require-directory node-require-main-filename node-retry node-rimraf
+  node-run-queue node-safe-buffer node-semver node-semver-diff
+  node-set-blocking node-sha node-shebang-command node-shebang-regex
+  node-signal-exit node-slide node-sntp node-sorted-object node-spdx-correct
+  node-spdx-expression-parse node-spdx-license-ids node-string-decoder
+  node-string-width node-stringstream node-strip-ansi node-strip-eof
+  node-strip-json-comments node-supports-color node-tar node-through
+  node-timed-out node-tough-cookie node-tunnel-agent node-uid-number
+  node-underscore node-unique-filename node-unpipe node-url-parse-lax
+  node-url-to-options node-util-deprecate node-validate-npm-package-license
+  node-wcwidth.js node-which node-which-module node-wide-align node-wrap-ansi
+  node-wrappy node-y18n node-yallist node-yargs node-yargs-parser
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libbison-dev libgmpxx4ldbl libncurses-dev
+Suggested packages:
+  bison-doc gmp-doc libgmp10-doc libmpfr-dev ncurses-doc readline-doc
+  sqlite3-doc libssl-doc libyaml-doc
+The following packages will be REMOVED
+  libssl1.0-dev node-gyp nodejs-dev npm
+The following NEW packages will be installed
+  bison curl libbison-dev libffi-dev libgdbm-dev libgmp-dev libgmpxx4ldbl
+  libncurses-dev libncurses5-dev libreadline-dev libsqlite3-dev libssl-dev
+  libyaml-dev zlib1g-dev
+0 to upgrade, 14 to newly install, 4 to remove and 0 not to upgrade.
+Need to get 4,243 kB of archives.
+After this operation, 1,536 kB disk space will be freed.
+Get:1 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libbison-dev amd64 2:3.0.4.dfsg-1ubuntu1 [339 kB]
+Get:2 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 bison amd64 2:3.0.4.dfsg-1ubuntu1 [267 kB]
+Get:3 http://id.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 curl amd64 7.61.0-1ubuntu2.2 [163 kB]
+Get:4 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libgdbm-dev amd64 1.14.1-6 [79.3 kB]
+Get:5 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libgmpxx4ldbl amd64 2:6.1.2+dfsg-3 [8,980 B]
+Get:6 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libgmp-dev amd64 2:6.1.2+dfsg-3 [316 kB]
+Get:7 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libncurses-dev amd64 6.1+20180210-4ubuntu1 [333 kB]
+Get:8 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libncurses5-dev amd64 6.1+20180210-4ubuntu1 [972 B]
+Get:9 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libreadline-dev amd64 7.0-5 [133 kB]
+Get:10 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libsqlite3-dev amd64 3.24.0-1 [646 kB]
+Get:11 http://id.archive.ubuntu.com/ubuntu cosmic-updates/main amd64 libssl-dev amd64 1.1.1-1ubuntu2.1 [1,568 kB]
+Get:12 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-0ubuntu2 [176 kB]
+Get:13 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libffi-dev amd64 3.2.1-8 [156 kB]
+Get:14 http://id.archive.ubuntu.com/ubuntu cosmic/main amd64 libyaml-dev amd64 0.2.1-1 [55.5 kB]
+Fetched 4,243 kB in 5s (917 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 255023 files and directories currently installed.)
+Removing npm (5.8.0+ds-2) ...
+Removing node-gyp (3.6.2-2) ...
+Removing nodejs-dev (8.11.4~dfsg-0ubuntu1) ...
+Removing libssl1.0-dev:amd64 (1.0.2n-1ubuntu6.1) ...
+Selecting previously unselected package libbison-dev:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 251561 files and directories currently installed.)
+Preparing to unpack .../00-libbison-dev_2%3a3.0.4.dfsg-1ubuntu1_amd64.deb ...
+Unpacking libbison-dev:amd64 (2:3.0.4.dfsg-1ubuntu1) ...
+Selecting previously unselected package bison.
+Preparing to unpack .../01-bison_2%3a3.0.4.dfsg-1ubuntu1_amd64.deb ...
+Unpacking bison (2:3.0.4.dfsg-1ubuntu1) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../02-curl_7.61.0-1ubuntu2.2_amd64.deb ...
+Unpacking curl (7.61.0-1ubuntu2.2) ...
+Selecting previously unselected package libgdbm-dev:amd64.
+Preparing to unpack .../03-libgdbm-dev_1.14.1-6_amd64.deb ...
+Unpacking libgdbm-dev:amd64 (1.14.1-6) ...
+Selecting previously unselected package libgmpxx4ldbl:amd64.
+Preparing to unpack .../04-libgmpxx4ldbl_2%3a6.1.2+dfsg-3_amd64.deb ...
+Unpacking libgmpxx4ldbl:amd64 (2:6.1.2+dfsg-3) ...
+Selecting previously unselected package libgmp-dev:amd64.
+Preparing to unpack .../05-libgmp-dev_2%3a6.1.2+dfsg-3_amd64.deb ...
+Unpacking libgmp-dev:amd64 (2:6.1.2+dfsg-3) ...
+Selecting previously unselected package libncurses-dev:amd64.
+Preparing to unpack .../06-libncurses-dev_6.1+20180210-4ubuntu1_amd64.deb ...
+Unpacking libncurses-dev:amd64 (6.1+20180210-4ubuntu1) ...
+Selecting previously unselected package libncurses5-dev:amd64.
+Preparing to unpack .../07-libncurses5-dev_6.1+20180210-4ubuntu1_amd64.deb ...
+Unpacking libncurses5-dev:amd64 (6.1+20180210-4ubuntu1) ...
+Selecting previously unselected package libreadline-dev:amd64.
+Preparing to unpack .../08-libreadline-dev_7.0-5_amd64.deb ...
+Unpacking libreadline-dev:amd64 (7.0-5) ...
+Selecting previously unselected package libsqlite3-dev:amd64.
+Preparing to unpack .../09-libsqlite3-dev_3.24.0-1_amd64.deb ...
+Unpacking libsqlite3-dev:amd64 (3.24.0-1) ...
+Selecting previously unselected package libssl-dev:amd64.
+Preparing to unpack .../10-libssl-dev_1.1.1-1ubuntu2.1_amd64.deb ...
+Unpacking libssl-dev:amd64 (1.1.1-1ubuntu2.1) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../11-zlib1g-dev_1%3a1.2.11.dfsg-0ubuntu2_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-0ubuntu2) ...
+Selecting previously unselected package libffi-dev:amd64.
+Preparing to unpack .../12-libffi-dev_3.2.1-8_amd64.deb ...
+Unpacking libffi-dev:amd64 (3.2.1-8) ...
+Selecting previously unselected package libyaml-dev:amd64.
+Preparing to unpack .../13-libyaml-dev_0.2.1-1_amd64.deb ...
+Unpacking libyaml-dev:amd64 (0.2.1-1) ...
+Setting up curl (7.61.0-1ubuntu2.2) ...
+Setting up libgdbm-dev:amd64 (1.14.1-6) ...
+Setting up libsqlite3-dev:amd64 (3.24.0-1) ...
+Processing triggers for install-info (6.5.0.dfsg.1-4) ...
+Setting up libssl-dev:amd64 (1.1.1-1ubuntu2.1) ...
+Setting up libffi-dev:amd64 (3.2.1-8) ...
+Setting up libyaml-dev:amd64 (0.2.1-1) ...
+Processing triggers for libc-bin (2.28-0ubuntu1) ...
+Setting up libbison-dev:amd64 (2:3.0.4.dfsg-1ubuntu1) ...
+Processing triggers for man-db (2.8.4-2) ...
+Setting up bison (2:3.0.4.dfsg-1ubuntu1) ...
+update-alternatives: using /usr/bin/bison.yacc to provide /usr/bin/yacc (yacc) in auto mode
+Setting up libgmpxx4ldbl:amd64 (2:6.1.2+dfsg-3) ...
+Setting up libncurses-dev:amd64 (6.1+20180210-4ubuntu1) ...
+Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-0ubuntu2) ...
+Setting up libgmp-dev:amd64 (2:6.1.2+dfsg-3) ...
+Setting up libncurses5-dev:amd64 (6.1+20180210-4ubuntu1) ...
+Setting up libreadline-dev:amd64 (7.0-5) ...
+Processing triggers for libc-bin (2.28-0ubuntu1) ...

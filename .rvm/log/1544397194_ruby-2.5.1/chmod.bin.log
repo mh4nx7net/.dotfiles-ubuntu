@@ -1,0 +1,27 @@
+[2018-12-10 06:17:35] __rvm_set_executable
+__rvm_set_executable () 
+{ 
+    for __file in "$@";
+    do
+        [[ -x "${__file}" ]] || chmod +x "${__file}";
+    done
+}
+current path: /home/sec/.rvm/src/ruby-2.5.1
+GEM_HOME=/home/sec/.rvm/gems/ruby-2.5.1
+GEM_PATH=/home/sec/.rvm/gems/ruby-2.5.1:/home/sec/.rvm/gems/ruby-2.5.1@global
+PATH=/home/sec/.rvm/gems/ruby-2.5.1/bin:/home/sec/.rvm/gems/ruby-2.5.1@global/bin:/home/sec/.rvm/rubies/ruby-2.5.1/bin:/opt/anaconda3/bin:/opt/anaconda3/bin:/home/sec/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools:/home/sec/.rvm/bin:/home/sec/.rvm/bin:/home/sec/.rvm/bin
+command(8): __rvm_set_executable /home/sec/.rvm/rubies/ruby-2.5.1/bin/erb /home/sec/.rvm/rubies/ruby-2.5.1/bin/gem /home/sec/.rvm/rubies/ruby-2.5.1/bin/irb /home/sec/.rvm/rubies/ruby-2.5.1/bin/rake /home/sec/.rvm/rubies/ruby-2.5.1/bin/rdoc /home/sec/.rvm/rubies/ruby-2.5.1/bin/ri /home/sec/.rvm/rubies/ruby-2.5.1/bin/ruby
+++ for __file in "$@"
+++ [[ -x /home/sec/.rvm/rubies/ruby-2.5.1/bin/erb ]]
+++ for __file in "$@"
+++ [[ -x /home/sec/.rvm/rubies/ruby-2.5.1/bin/gem ]]
+++ for __file in "$@"
+++ [[ -x /home/sec/.rvm/rubies/ruby-2.5.1/bin/irb ]]
+++ for __file in "$@"
+++ [[ -x /home/sec/.rvm/rubies/ruby-2.5.1/bin/rake ]]
+++ for __file in "$@"
+++ [[ -x /home/sec/.rvm/rubies/ruby-2.5.1/bin/rdoc ]]
+++ for __file in "$@"
+++ [[ -x /home/sec/.rvm/rubies/ruby-2.5.1/bin/ri ]]
+++ for __file in "$@"
+++ [[ -x /home/sec/.rvm/rubies/ruby-2.5.1/bin/ruby ]]

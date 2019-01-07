@@ -1,0 +1,6 @@
+---
+0.0.1 parslet:>= 1.2,rack:>= 1.3.2,trollop:>= 1.16.2|checksum:18b9c473305481ec7944cec954b53b32929b4f470baf647f19899ec201df5f8c
+0.0.2 parslet:>= 1.2,rack:>= 1.3,trollop:>= 1.16|checksum:35e019d90be1380cf493d5d86df996da47b5fc5d67132a02c2a6570616e891f5
+0.0.9 parslet:>= 1.2,rack:>= 1.3,trollop:>= 1.16|checksum:dc17b36ce16c1e32c0c8dd709e92d9bde84d0e6df23e19a29046737b85e4acc4
+0.1.0 parslet:>= 1.2,rack:>= 1.3,trollop:>= 1.16|checksum:a8bd4173c596d5ca50ba9501127fa470a23b8ee59e4ab315547858d921082205
+0.1.1 parslet:>= 1.2,rack:>= 1.3,trollop:>= 1.16|checksum:3b23aa014744fbdf4a4c89e18ae97ce3553db515e7e305e058e847dc053beba2

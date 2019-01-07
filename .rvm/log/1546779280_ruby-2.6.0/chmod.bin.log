@@ -1,0 +1,31 @@
+[2019-01-06 19:58:08] __rvm_set_executable
+__rvm_set_executable () 
+{ 
+    for __file in "$@";
+    do
+        [[ -x "${__file}" ]] || chmod +x "${__file}";
+    done
+}
+current path: /home/sec/.rvm/src/ruby-2.6.0
+GEM_HOME=/home/sec/.rvm/gems/ruby-2.5.1
+GEM_PATH=/home/sec/.rvm/gems/ruby-2.5.1:/home/sec/.rvm/gems/ruby-2.5.1@global
+PATH=/home/sec/.rvm/gems/ruby-2.5.1/bin:/home/sec/.rvm/gems/ruby-2.5.1@global/bin:/home/sec/.rvm/rubies/ruby-2.5.1/bin:/home/sec/.rvm/bin:/opt/AIK-Linux-v3.3-ALL:/home/sec/anaconda3/bin:/home/sec/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools
+command(10): __rvm_set_executable /home/sec/.rvm/rubies/ruby-2.6.0/bin/bundle /home/sec/.rvm/rubies/ruby-2.6.0/bin/bundler /home/sec/.rvm/rubies/ruby-2.6.0/bin/erb /home/sec/.rvm/rubies/ruby-2.6.0/bin/gem /home/sec/.rvm/rubies/ruby-2.6.0/bin/irb /home/sec/.rvm/rubies/ruby-2.6.0/bin/rake /home/sec/.rvm/rubies/ruby-2.6.0/bin/rdoc /home/sec/.rvm/rubies/ruby-2.6.0/bin/ri /home/sec/.rvm/rubies/ruby-2.6.0/bin/ruby
+++ /scripts/functions/gemset : __rvm_set_executable()  379 > for __file in "$@"
+++ /scripts/functions/gemset : __rvm_set_executable()  380 > [[ -x /home/sec/.rvm/rubies/ruby-2.6.0/bin/bundle ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  379 > for __file in "$@"
+++ /scripts/functions/gemset : __rvm_set_executable()  380 > [[ -x /home/sec/.rvm/rubies/ruby-2.6.0/bin/bundler ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  379 > for __file in "$@"
+++ /scripts/functions/gemset : __rvm_set_executable()  380 > [[ -x /home/sec/.rvm/rubies/ruby-2.6.0/bin/erb ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  379 > for __file in "$@"
+++ /scripts/functions/gemset : __rvm_set_executable()  380 > [[ -x /home/sec/.rvm/rubies/ruby-2.6.0/bin/gem ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  379 > for __file in "$@"
+++ /scripts/functions/gemset : __rvm_set_executable()  380 > [[ -x /home/sec/.rvm/rubies/ruby-2.6.0/bin/irb ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  379 > for __file in "$@"
+++ /scripts/functions/gemset : __rvm_set_executable()  380 > [[ -x /home/sec/.rvm/rubies/ruby-2.6.0/bin/rake ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  379 > for __file in "$@"
+++ /scripts/functions/gemset : __rvm_set_executable()  380 > [[ -x /home/sec/.rvm/rubies/ruby-2.6.0/bin/rdoc ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  379 > for __file in "$@"
+++ /scripts/functions/gemset : __rvm_set_executable()  380 > [[ -x /home/sec/.rvm/rubies/ruby-2.6.0/bin/ri ]]
+++ /scripts/functions/gemset : __rvm_set_executable()  379 > for __file in "$@"
+++ /scripts/functions/gemset : __rvm_set_executable()  380 > [[ -x /home/sec/.rvm/rubies/ruby-2.6.0/bin/ruby ]]

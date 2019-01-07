@@ -1,0 +1,28 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class EventSource {
+    constructor() {
+        this.callbacks = new Array();
+    }
+    setEvent() {
+        this.callbacks = this.callbacks.filter(c => !(c.oneTime === true && c.callCount !== 0));
+        this.callbacks.forEach(c => {
+            c.callback();
+            c.callCount++;
+        });
+    }
+    schedule(callback) {
+        let multipleTimesCallback = {
+            callback: () => { callback(); }, oneTime: false, callCount: 0
+        };
+        this.callbacks.push(multipleTimesCallback);
+    }
+    scheduleOnce(callback) {
+        let oneTimeCallback = {
+            callback: () => { callback(); }, oneTime: true, callCount: 0
+        };
+        this.callbacks.push(oneTimeCallback);
+    }
+}
+exports.EventSource = EventSource;
+//# sourceMappingURL=eventSource.js.map

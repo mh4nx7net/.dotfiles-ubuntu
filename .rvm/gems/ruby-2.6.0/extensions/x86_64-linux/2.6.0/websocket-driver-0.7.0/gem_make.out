@@ -1,0 +1,15 @@
+current directory: /home/sec/.rvm/gems/ruby-2.6.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+/home/sec/.rvm/rubies/ruby-2.6.0/bin/ruby -I /home/sec/.rvm/rubies/ruby-2.6.0/lib/ruby/2.6.0 -r ./siteconf20190106-19251-1a5c27o.rb extconf.rb
+creating Makefile
+
+current directory: /home/sec/.rvm/gems/ruby-2.6.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/sec/.rvm/gems/ruby-2.6.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/sec/.rvm/gems/ruby-2.6.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20190106-19251-1gdhgmh

@@ -9179,3 +9179,59 @@ antigen
 [WRN][1546886733.4470059872] -antigen-cache-init return code was 0
 [LOG][1546886733.4470565319] /home/sec/.oh-my-zsh/lib/antigen.zsh:1574
 [LOG][1546886733.4470565319] LOADED EXTENSION cache EXT
+[WRN][1546889272.5384330750] /home/sec/.oh-my-zsh/lib/antigen.zsh:266
+[WRN][1546889272.5384330750] -antigen-interactive-mode: file:file:file:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1546889272.5389850140] /home/sec/.oh-my-zsh/lib/antigen.zsh:1572
+[WRN][1546889272.5389850140] -antigen-lock-init return code was 0
+[LOG][1546889272.5391001701] /home/sec/.oh-my-zsh/lib/antigen.zsh:1574
+[LOG][1546889272.5391001701] LOADED EXTENSION lock EXT
+[WRN][1546889272.5411727428] /home/sec/.oh-my-zsh/lib/antigen.zsh:1684
+[WRN][1546889272.5411727428] Init parallel extension PARALLEL
+[WRN][1546889272.5412578583] /home/sec/.oh-my-zsh/lib/antigen.zsh:266
+[WRN][1546889272.5412578583] -antigen-interactive-mode: file:file:file:shfunc:shfunc:shfunc:eval:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1546889272.5413422585] /home/sec/.oh-my-zsh/lib/antigen.zsh:1572
+[WRN][1546889272.5413422585] -antigen-parallel-init return code was 0
+[LOG][1546889272.5413954258] /home/sec/.oh-my-zsh/lib/antigen.zsh:1574
+[LOG][1546889272.5413954258] LOADED EXTENSION parallel EXT
+[WRN][1546889272.5414505005] /home/sec/.oh-my-zsh/lib/antigen.zsh:1692
+[WRN][1546889272.5414505005] Exec parallel extension PARALLEL
+[WRN][1546889272.5417318344] /home/sec/.oh-my-zsh/lib/antigen.zsh:266
+[WRN][1546889272.5417318344] -antigen-interactive-mode: file:file:file:shfunc:shfunc:shfunc:eval:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1546889272.5418095589] /home/sec/.oh-my-zsh/lib/antigen.zsh:1572
+[WRN][1546889272.5418095589] -antigen-defer-init return code was 0
+[LOG][1546889272.5418736935] /home/sec/.oh-my-zsh/lib/antigen.zsh:1574
+[LOG][1546889272.5418736935] LOADED EXTENSION defer EXT
+[WRN][1546889272.5430352688] /home/sec/.oh-my-zsh/lib/antigen.zsh:266
+[WRN][1546889272.5430352688] -antigen-interactive-mode: file:file:file:shfunc:shfunc:shfunc:eval:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1546889272.5434963703] /home/sec/.oh-my-zsh/lib/antigen.zsh:1572
+[WRN][1546889272.5434963703] -antigen-cache-init return code was 0
+[LOG][1546889272.5436153412] /home/sec/.oh-my-zsh/lib/antigen.zsh:1574
+[LOG][1546889272.5436153412] LOADED EXTENSION cache EXT
+[WRN][1546889273.6671719551] /home/sec/.oh-my-zsh/lib/antigen.zsh:266
+[WRN][1546889273.6671719551] -antigen-interactive-mode: file:file:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1546889273.6674199104] /home/sec/.oh-my-zsh/lib/antigen.zsh:1572
+[WRN][1546889273.6674199104] -antigen-lock-init return code was 0
+[LOG][1546889273.6674754620] /home/sec/.oh-my-zsh/lib/antigen.zsh:1574
+[LOG][1546889273.6674754620] LOADED EXTENSION lock EXT
+[WRN][1546889273.6677308083] /home/sec/.oh-my-zsh/lib/antigen.zsh:1684
+[WRN][1546889273.6677308083] Init parallel extension PARALLEL
+[WRN][1546889273.6677956581] /home/sec/.oh-my-zsh/lib/antigen.zsh:266
+[WRN][1546889273.6677956581] -antigen-interactive-mode: file:file:shfunc:shfunc:shfunc:eval:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1546889273.6679146290] /home/sec/.oh-my-zsh/lib/antigen.zsh:1572
+[WRN][1546889273.6679146290] -antigen-parallel-init return code was 0
+[LOG][1546889273.6679706573] /home/sec/.oh-my-zsh/lib/antigen.zsh:1574
+[LOG][1546889273.6679706573] LOADED EXTENSION parallel EXT
+[WRN][1546889273.6680407524] /home/sec/.oh-my-zsh/lib/antigen.zsh:1692
+[WRN][1546889273.6680407524] Exec parallel extension PARALLEL
+[WRN][1546889273.6684126854] /home/sec/.oh-my-zsh/lib/antigen.zsh:266
+[WRN][1546889273.6684126854] -antigen-interactive-mode: file:file:shfunc:shfunc:shfunc:eval:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1546889273.6684980392] /home/sec/.oh-my-zsh/lib/antigen.zsh:1572
+[WRN][1546889273.6684980392] -antigen-defer-init return code was 0
+[LOG][1546889273.6686053276] /home/sec/.oh-my-zsh/lib/antigen.zsh:1574
+[LOG][1546889273.6686053276] LOADED EXTENSION defer EXT
+[WRN][1546889273.6689131260] /home/sec/.oh-my-zsh/lib/antigen.zsh:266
+[WRN][1546889273.6689131260] -antigen-interactive-mode: file:file:shfunc:shfunc:shfunc:eval:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1546889273.6691281796] /home/sec/.oh-my-zsh/lib/antigen.zsh:1572
+[WRN][1546889273.6691281796] -antigen-cache-init return code was 0
+[LOG][1546889273.6691827774] /home/sec/.oh-my-zsh/lib/antigen.zsh:1574
+[LOG][1546889273.6691827774] LOADED EXTENSION cache EXT

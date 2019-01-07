@@ -1,0 +1,78 @@
+[2018-12-14 06:44:20] gemset_delete_task
+gemset_delete_task () 
+{ 
+    \typeset rvm_gemset_name ruby_at_gemset gemdir;
+    rvm_gemset_name=$1;
+    ruby_at_gemset=$2;
+    gemdir=$3;
+    case ${_system_type} in 
+        BSD)
+            __rvm_find "${rvm_bin_path:=$rvm_path/bin}" -name \*${ruby_at_gemset} -exec rm -rf '{}' \;;
+            __rvm_find -L "${rvm_bin_path:=$rvm_path/bin}" -name \*${ruby_at_gemset} -exec rm -rf '{}' \;
+        ;;
+        *)
+            __rvm_find "${rvm_bin_path:=$rvm_path/bin}" \( -name \*${ruby_at_gemset} -or -lname \*${ruby_at_gemset}/\* \) -delete
+        ;;
+    esac;
+    for item in $( $rvm_scripts_path/alias search_by_target ${ruby_at_gemset} );
+    do
+        $rvm_scripts_path/alias delete ${item};
+    done;
+    __rvm_rm_rf "$gemdir" && __rvm_rm_rf "${rvm_wrappers_path:="$rvm_path/wrappers"}/${ruby_at_gemset}" && __rvm_rm_rf "${rvm_environments_path:="$rvm_path/environments"}/${ruby_at_gemset}"
+}
+current path: /home/sec/RubymineProjects
+GEM_HOME=/home/sec/.rvm/gems/ruby-2.5.1
+GEM_PATH=/home/sec/.rvm/gems/ruby-2.5.1:/home/sec/.rvm/gems/ruby-2.5.1@global
+PATH=/opt/anaconda3/bin:/home/sec/.npm-global/bin:/home/sec/.rvm/gems/ruby-2.5.1/bin:/home/sec/.rvm/gems/ruby-2.5.1@global/bin:/home/sec/.rvm/rubies/ruby-2.5.1/bin:/home/sec/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sec/.dotnet/tools:/home/sec/.rvm/bin:/home/sec/.rvm/bin
+command(4): gemset_delete_task rails ruby-2.5.1@rails /home/sec/.rvm/gems/ruby-2.5.1@rails
++ typeset rvm_gemset_name ruby_at_gemset gemdir
++ rvm_gemset_name=rails
++ ruby_at_gemset=ruby-2.5.1@rails
++ gemdir=/home/sec/.rvm/gems/ruby-2.5.1@rails
++ case ${_system_type} in
++ __rvm_find /home/sec/.rvm/bin '(' -name '*ruby-2.5.1@rails' -or -lname '*ruby-2.5.1@rails/*' ')' -delete
++ find /home/sec/.rvm/bin '(' -name '*ruby-2.5.1@rails' -or -lname '*ruby-2.5.1@rails/*' ')' -delete
+++ /home/sec/.rvm/scripts/alias search_by_target ruby-2.5.1@rails
++ __rvm_rm_rf /home/sec/.rvm/gems/ruby-2.5.1@rails
++ __rvm_rm_rf_verbose /home/sec/.rvm/gems/ruby-2.5.1@rails
++ typeset target
++ target=/home/sec/.rvm/gems/ruby-2.5.1@rails
++ [[ -n '' ]]
++ [[ -n 4.4.19(1)-release ]]
++ builtin shopt -s extglob
++ case "${target}" in
++ [[ -z /home/sec/.rvm/gems/ruby-2.5.1@rails ]]
++ [[ -d /home/sec/.rvm/gems/ruby-2.5.1@rails ]]
++ command rm -rf /home/sec/.rvm/gems/ruby-2.5.1@rails
++ rm -rf /home/sec/.rvm/gems/ruby-2.5.1@rails
++ true
++ __rvm_rm_rf /home/sec/.rvm/wrappers/ruby-2.5.1@rails
++ __rvm_rm_rf_verbose /home/sec/.rvm/wrappers/ruby-2.5.1@rails
++ typeset target
++ target=/home/sec/.rvm/wrappers/ruby-2.5.1@rails
++ [[ -n '' ]]
++ [[ -n 4.4.19(1)-release ]]
++ builtin shopt -s extglob
++ case "${target}" in
++ [[ -z /home/sec/.rvm/wrappers/ruby-2.5.1@rails ]]
++ [[ -d /home/sec/.rvm/wrappers/ruby-2.5.1@rails ]]
++ [[ -f /home/sec/.rvm/wrappers/ruby-2.5.1@rails ]]
++ [[ -L /home/sec/.rvm/wrappers/ruby-2.5.1@rails ]]
++ command rm -f /home/sec/.rvm/wrappers/ruby-2.5.1@rails
++ rm -f /home/sec/.rvm/wrappers/ruby-2.5.1@rails
++ true
++ __rvm_rm_rf /home/sec/.rvm/environments/ruby-2.5.1@rails
++ __rvm_rm_rf_verbose /home/sec/.rvm/environments/ruby-2.5.1@rails
++ typeset target
++ target=/home/sec/.rvm/environments/ruby-2.5.1@rails
++ [[ -n '' ]]
++ [[ -n 4.4.19(1)-release ]]
++ builtin shopt -s extglob
++ case "${target}" in
++ [[ -z /home/sec/.rvm/environments/ruby-2.5.1@rails ]]
++ [[ -d /home/sec/.rvm/environments/ruby-2.5.1@rails ]]
++ [[ -f /home/sec/.rvm/environments/ruby-2.5.1@rails ]]
++ [[ -L /home/sec/.rvm/environments/ruby-2.5.1@rails ]]
++ command rm -f /home/sec/.rvm/environments/ruby-2.5.1@rails
++ rm -f /home/sec/.rvm/environments/ruby-2.5.1@rails
++ true

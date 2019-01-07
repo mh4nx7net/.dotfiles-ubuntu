@@ -1,0 +1,65 @@
+{
+	"name": "vsc-invoke",
+	"displayName": "Invoke (Python Task Executor)",
+	"description": "Support for executing Invoke task from VS Code",
+	"version": "0.0.9",
+	"publisher": "dchanco",
+	"icon": "images/invoke-icon.png",
+	"galleryBanner": {
+		"color": "#171515",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.invokeVersion",
+		"onCommand:extension.invokeTask"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.invokeVersion",
+				"title": "Invoke version"
+			},
+			{
+				"command": "extension.invokeTask",
+				"title": "Invoke a task"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "VSC Invoke extension configuration",
+			"properties": {
+				"vsc-invoke.invoke.cmd": {
+					"type": "string",
+					"default": "invoke",
+					"description": "Full name (and optionally path) to invoke command"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"eslint": "^4.6.1",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"child_process": "^1.0.2"
+	},
+	"__metadata": {
+		"id": "7d02cc2d-2b0c-4915-8ae0-9a9071ba2a30",
+		"publisherId": "55739b3a-da5a-4879-8673-7bc0f481deaa",
+		"publisherDisplayName": "David Chancogne"
+	}
+}
