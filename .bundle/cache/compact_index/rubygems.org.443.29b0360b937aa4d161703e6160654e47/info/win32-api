@@ -54,3 +54,4 @@
 1.7.0.pre1-universal-mingw32 |checksum:b05eddb819da704d1968fe3e2c86b76da4c691f75fff6059b2edff6e0441d103,ruby:>= 1.8.2,rubygems:> 1.3.1
 1.7.0-universal-mingw32 |checksum:60e1793faf8f515e9aa168b15886b23f679d7ceef7347bf8b4d8ec24ffe4b247,ruby:>= 1.8.2
 1.7.1-universal-mingw32 |checksum:59d78f86e891a3212e9dabd89fb800282192fa08be1c1a5786d06c8463e7f812,ruby:>= 1.8.2
+1.8.0-universal-mingw32 |checksum:6842a7003cac3c1868bad90ddae1a8ed6ca4f34193a445aa5a9888e981f57db4,ruby:>= 1.8.2

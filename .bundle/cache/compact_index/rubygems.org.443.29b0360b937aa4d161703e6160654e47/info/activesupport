@@ -323,3 +323,4 @@
 5.2.1.1 concurrent-ruby:>= 1.0.2&~> 1.0,i18n:< 2&>= 0.7,minitest:~> 5.1,tzinfo:~> 1.1|checksum:6e055f81d0ec158475faed1bb4e00c8030b67ecc2b7aee83be24c995a5d1a1dc,ruby:>= 2.2.2
 5.2.2.rc1 concurrent-ruby:>= 1.0.2&~> 1.0,i18n:< 2&>= 0.7,minitest:~> 5.1,tzinfo:~> 1.1|checksum:bcd01d80cd4863368d3c3c8914527170b488b354611eeecd6e57553019c776ef,ruby:>= 2.2.2,rubygems:> 1.3.1
 5.2.2 concurrent-ruby:>= 1.0.2&~> 1.0,i18n:< 2&>= 0.7,minitest:~> 5.1,tzinfo:~> 1.1|checksum:ff393e485ba5e9bad8b8f1d7b89b2addd697420f9faca3c9c9da778efb3ecac7,ruby:>= 2.2.2
+6.0.0.beta1 concurrent-ruby:>= 1.0.2&~> 1.0,i18n:< 2&>= 0.7,minitest:~> 5.1,tzinfo:~> 1.1|checksum:194479f061f8993c2f501fbaf1fdb035716a3c5786ff537ce1c323bf79db81ca,ruby:>= 2.5.0,rubygems:> 1.3.1

@@ -392,3 +392,7 @@
 1.10.0-x64-mingw32 mini_portile2:~> 2.4.0|checksum:39aa5ca8c7a46b4c0e9d1844205d61014b562c47c4d36d1fc4e89067601692f2,ruby:< 2.7.dev, >= 2.3
 1.10.0-x86-mingw32 mini_portile2:~> 2.4.0|checksum:7a7b3b0e02b334a6194e13abea8b9b00135912ddafe795cd73b27054e0624169,ruby:< 2.7.dev, >= 2.3
 1.10.0 mini_portile2:~> 2.4.0|checksum:3ce77e0df5daa0be5c93edd0487f9cd761206d7f85e5916bf778c8187d3214c7,ruby:>= 2.3.0
+1.10.1 mini_portile2:~> 2.4.0|checksum:0405d84a87d7dbc057eb9a2d0fcef5795e23992db516b83d37b91f69d8a1f427,ruby:>= 2.3.0
+1.10.1-java |checksum:e95e8c55c09a4ce85d397916f57387b7974ea7913654e50dd624896ff8192de8,ruby:>= 2.3.0
+1.10.1-x64-mingw32 mini_portile2:~> 2.4.0|checksum:d8fe8834dbbac9bd1f1055f00e209aa4e24cbfebdd20ed2332760ab02059f74b,ruby:>= 2.3, < 2.7.dev
+1.10.1-x86-mingw32 mini_portile2:~> 2.4.0|checksum:6154afaa9182453282e18ece2a3b035162ae792826dd3e2e091b1730b04f1e19,ruby:>= 2.3, < 2.7.dev

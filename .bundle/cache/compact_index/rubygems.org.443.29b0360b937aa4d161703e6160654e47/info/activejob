@@ -88,3 +88,4 @@
 5.2.1.1 activesupport:= 5.2.1.1,globalid:>= 0.3.6|checksum:b9bbb83cc41e2bff53f6cc1f5a57c6edcefca0e63084621bcad43c6aca37edfc,ruby:>= 2.2.2
 5.2.2.rc1 activesupport:= 5.2.2.rc1,globalid:>= 0.3.6|checksum:56102eeb75e9a29d400a648334f2f7e16f21948a608abd448c4663235752a7ea,ruby:>= 2.2.2,rubygems:> 1.3.1
 5.2.2 activesupport:= 5.2.2,globalid:>= 0.3.6|checksum:390a81080e800691131d0f26943216790bc40404f5e6d44b79f92ad185a153ca,ruby:>= 2.2.2
+6.0.0.beta1 activesupport:= 6.0.0.beta1,globalid:>= 0.3.6|checksum:448b727e087d59649cf60a58bcae6c21485e00b8da6d393190b8d21418a69525,ruby:>= 2.5.0,rubygems:> 1.3.1

@@ -274,3 +274,4 @@
 5.2.1.1 actionpack:= 5.2.1.1,activesupport:= 5.2.1.1,method_source:>= 0,rake:>= 0.8.7,thor:< 2.0&>= 0.19.0|checksum:1030556e9bb07d192429659cbe5561339bbe845f9d78194a34bbc040653c7685,ruby:>= 2.2.2
 5.2.2.rc1 actionpack:= 5.2.2.rc1,activesupport:= 5.2.2.rc1,method_source:>= 0,rake:>= 0.8.7,thor:< 2.0&>= 0.19.0|checksum:1d9950a611acb8fef50ba1477efa3e4730d713db55f834bdccd12fd950f2de51,ruby:>= 2.2.2,rubygems:> 1.3.1
 5.2.2 actionpack:= 5.2.2,activesupport:= 5.2.2,method_source:>= 0,rake:>= 0.8.7,thor:< 2.0&>= 0.19.0|checksum:34648d2794966bd330681706edcc73cdd234208a1dd2c27b358491bf2af5f602,ruby:>= 2.2.2
+6.0.0.beta1 actionpack:= 6.0.0.beta1,activesupport:= 6.0.0.beta1,method_source:>= 0,rake:>= 0.8.7,thor:< 2.0&>= 0.20.3|checksum:13ef365401372e843f223f3f7d39bdabdd4b2cad643f678603b5dde6fea61132,ruby:>= 2.5.0,rubygems:> 1.3.1

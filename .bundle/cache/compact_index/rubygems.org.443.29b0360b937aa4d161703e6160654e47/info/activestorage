@@ -10,3 +10,4 @@
 5.2.1.1 actionpack:= 5.2.1.1,activerecord:= 5.2.1.1,marcel:~> 0.3.1|checksum:451b837320e6c2da51974d1b844d120718c726b5e13e905b0ba83e2759991c92,ruby:>= 2.2.2
 5.2.2.rc1 actionpack:= 5.2.2.rc1,activerecord:= 5.2.2.rc1,marcel:~> 0.3.1|checksum:5cd7d2938d615637201326083edcb5b832254dec3a64638440777c34f1ad030c,ruby:>= 2.2.2,rubygems:> 1.3.1
 5.2.2 actionpack:= 5.2.2,activerecord:= 5.2.2,marcel:~> 0.3.1|checksum:615cc276b090dc96b8367345cb35e97ce073c5cab599b9091a5ca304ce40e230,ruby:>= 2.2.2
+6.0.0.beta1 actionpack:= 6.0.0.beta1,activerecord:= 6.0.0.beta1,marcel:~> 0.3.1|checksum:b6bed28a3ea6f1b2984e586581fe5c2d11c608a43c5e3a92a0d2d1649009e42f,ruby:>= 2.5.0,rubygems:> 1.3.1

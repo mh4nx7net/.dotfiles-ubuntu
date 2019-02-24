@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/sec/.oh-my-zsh"
+  export ZSH="/home/sec/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -21,7 +21,7 @@ ZSH_THEME="spaceship"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -36,10 +36,10 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -62,29 +62,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  adb
-  git
-  rails
-  chruby
-  coffee
-  colored-man-page
-  colorize
-  copyfile
-  docker
-  heroku
-  rake
-  rbenv
-  rsync
-  rvm
-  ruby
-  ubuntu
-  yarn
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.oh-my-zsh/lib/antigen.zsh
-export ShellProj="$HOME/Projects/ShellProject:$ShellProj"
 
 # User configuration
 
@@ -112,59 +92,5 @@ export ShellProj="$HOME/Projects/ShellProject:$ShellProj"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="nano ~/.zshrc"
-alias ohmyzsh="nano ~/.oh-my-zsh"
-alias re="reset"
-alias del="rm-trash"
-# Set Spaceship ZSH as a prompt
-#autoload -U promptinit; promptinit
-#prompt spaceship
-neofetch
-
-# added by Anaconda3 5.3.0 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$(CONDA_REPORT_ERRORS=false '$HOME/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    \eval "$__conda_setup"
-#else
-#    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
-#        . "$HOME/anaconda3/etc/profile.d/conda.sh"
-#        CONDA_CHANGEPS1=false conda activate base
-#    else
-#        \export PATH="$HOME/anaconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda init <<<
-
-export PATH="/home/sec/anaconda3/bin:$PATH"
-export PATH="/opt/AIK-Linux-v3.3-ALL:$PATH"
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-NPM_CONFIG_PREFIX=~/.npm-global
-
-#docker management control keybind
-alias doccof="docker config"      #Manage Docker configs
-alias doccon="docker container"   #Manage containers
-alias doceng="docker engine"      #Manage the docker engine
-alias docimg="docker image"       #Manage images
-alias docnet="docker network"     #Manage networks
-alias docnod="docker node"        #Manage Swarm nodes
-alias docplu="docker plugin"      #Manage plugins
-alias docsec="docker secret"      #Manage Docker secrets
-alias docser="docker service"     #Manage services
-alias docstk="docker stack"       #Manage Docker stacks
-alias docswm="docker swarm"       #Manage Swarm
-alias docsys="docker system"      #Manage Docker
-alias doctrs="docker trust"       #Manage trust on Docker images
-alias docvol="docker volume"      #Manage volumes
-alias din="docker inspect"	  #inspectmode
-
-#ruby .irbrc
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"

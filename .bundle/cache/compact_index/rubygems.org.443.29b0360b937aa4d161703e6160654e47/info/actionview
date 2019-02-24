@@ -127,3 +127,4 @@
 5.2.1.1 activesupport:= 5.2.1.1,builder:~> 3.1,erubi:~> 1.4,rails-dom-testing:~> 2.0,rails-html-sanitizer:>= 1.0.3&~> 1.0|checksum:9c449f59f03890dceb8bb05f53c2b6b331a37180258a605e27e48982114feebb,ruby:>= 2.2.2
 5.2.2.rc1 activesupport:= 5.2.2.rc1,builder:~> 3.1,erubi:~> 1.4,rails-dom-testing:~> 2.0,rails-html-sanitizer:>= 1.0.3&~> 1.0|checksum:f0202029b41eeda234e52136191604a52adda23445722172ec2398efe830efd1,ruby:>= 2.2.2,rubygems:> 1.3.1
 5.2.2 activesupport:= 5.2.2,builder:~> 3.1,erubi:~> 1.4,rails-dom-testing:~> 2.0,rails-html-sanitizer:>= 1.0.3&~> 1.0|checksum:1fe90c7eec75f8833b5459099069a40514b72e09d94ab436ece087b87223e0d3,ruby:>= 2.2.2
+6.0.0.beta1 activesupport:= 6.0.0.beta1,builder:~> 3.1,erubi:~> 1.4,rails-dom-testing:~> 2.0,rails-html-sanitizer:>= 1.0.3&~> 1.0|checksum:252514d0d611da53bf004a8b3373ce9d6e0c098e3987a9fe7420097b692edb7d,ruby:>= 2.5.0,rubygems:> 1.3.1

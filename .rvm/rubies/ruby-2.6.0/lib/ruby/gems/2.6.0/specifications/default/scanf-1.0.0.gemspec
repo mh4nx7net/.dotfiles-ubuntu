@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib".freeze]
   s.authors = ["David Alan Black".freeze]
   s.bindir = "exe".freeze
-  s.date = "2019-01-06"
+  s.date = "2019-02-24"
   s.description = "scanf is an implementation of the C function scanf(3).".freeze
   s.email = ["dblack@superlink.net".freeze]
   s.files = ["lib/scanf.rb".freeze]

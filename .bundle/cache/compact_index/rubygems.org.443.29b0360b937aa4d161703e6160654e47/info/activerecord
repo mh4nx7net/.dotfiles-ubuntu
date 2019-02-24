@@ -335,3 +335,4 @@
 5.2.1.1 activemodel:= 5.2.1.1,activesupport:= 5.2.1.1,arel:>= 9.0|checksum:46b27c575c9e2c6810c2b9223f0034b54e9d061c2b8c72f3dd4226947debee58,ruby:>= 2.2.2
 5.2.2.rc1 activemodel:= 5.2.2.rc1,activesupport:= 5.2.2.rc1,arel:>= 9.0|checksum:7bded9a0bfe31eca3df543e59945cf16e3d0d1b32908d879fa1f9469a9cbd3e3,ruby:>= 2.2.2,rubygems:> 1.3.1
 5.2.2 activemodel:= 5.2.2,activesupport:= 5.2.2,arel:>= 9.0|checksum:1e8c0fabfd6618e167d125d8d074a1392f4a760b8b16513d179f1765b4d540a5,ruby:>= 2.2.2
+6.0.0.beta1 activemodel:= 6.0.0.beta1,activesupport:= 6.0.0.beta1|checksum:c29b792c034ab3ad3e60ce03124a4bd4e44f5aac1abd2f4e138a5fd5000c7a76,ruby:>= 2.5.0,rubygems:> 1.3.1

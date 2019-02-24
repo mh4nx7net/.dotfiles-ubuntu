@@ -30,3 +30,9 @@
 1.2.4-x64-mingw32 |checksum:eebac918392ec69f177126b693b75262f46e5db437d0dc31c238005ed9095fd7,ruby:< 2.5, >= 2.2
 1.2.4-x86-mingw32 |checksum:2fead4284c29ded93bd95a8d0a91ea87aba3216bb794019632d45bc8a61b0258,ruby:< 2.5, >= 2.2
 1.2.5 |checksum:a4a0d0d20fbc838e777c8dc516e4ad158b0fea6abd22149ab383b3fe65536c6d,ruby:>= 2.1.0
+1.2.6 |checksum:b7f8bad7c88f447dec5dd66d3d79d1717c8ae5a336d807ac8a084ace6756f185,ruby:>= 2.1.0
+1.2.6-x64-mingw32 |checksum:d8ec68e8d1babd1c611e00dfc95214c73bd7dc43f8c0cb1cecf967a993354329,ruby:>= 2.3, < 2.7.dev
+1.2.6-x86-mingw32 |checksum:2b3fd13f250cca68acceed95a3b5b0a5a6e0fc727ff1408299a651a3f3c4d116,ruby:>= 2.3, < 2.7.dev
+1.2.7 |checksum:6610ea7cda380573987a5e77b2a05e28dbf8196bd7e3fdd6d5ec15f38590d164,ruby:>= 2.1.0
+1.2.7-x64-mingw32 |checksum:8c8c5cca408c66d6d687dc3344b5f0af8e64784629cb4f1255a9bc28c9784255,ruby:>= 2.3, < 2.7
+1.2.7-x86-mingw32 |checksum:d14c5253411cf04d00c3c7546c1975a4b0b3c53b929241540e77e5bb7d3001a5,ruby:>= 2.3, < 2.7

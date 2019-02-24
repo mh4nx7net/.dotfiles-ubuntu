@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib".freeze]
   s.authors = ["Yuki Sonoda".freeze]
   s.bindir = "exe".freeze
-  s.date = "2019-01-06"
+  s.date = "2019-02-24"
   s.description = "Prime numbers and factorization library.".freeze
   s.email = ["yugui@yugui.jp".freeze]
   s.files = [".gitignore".freeze, ".travis.yml".freeze, "Gemfile".freeze, "LICENSE.txt".freeze, "README.md".freeze, "Rakefile".freeze, "bin/console".freeze, "bin/setup".freeze, "lib/prime.rb".freeze, "lib/prime/version.rb".freeze, "prime.gemspec".freeze]

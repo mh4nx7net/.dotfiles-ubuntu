@@ -101,3 +101,4 @@
 2.5.1.1 ast:~> 2.4.0|checksum:eadf6cd4abe01a9342ed032cc80cc2876e7d56d71c6f535b1ac08ec60314d4c6,ruby:>= 2.0.0
 2.5.1.2 ast:~> 2.4.0|checksum:b32cef404a7f3acbcc4b845089c4716dddcc589ce84addbf66f6fa78de4fe8fe,ruby:>= 2.0.0
 2.5.3.0 ast:~> 2.4.0|checksum:2e58e006aa97d068f242483a78274313bc47940283045f3d9a7d4839030753fe,ruby:>= 2.0.0
+2.6.0.0 ast:~> 2.4.0|checksum:95f2f41c01f7856c7256c203cf22be14665f6d930f734ac314799f40ca141fc2,ruby:>= 2.0.0

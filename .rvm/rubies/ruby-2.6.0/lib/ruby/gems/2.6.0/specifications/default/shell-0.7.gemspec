@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib".freeze]
   s.authors = ["Keiju ISHITSUKA".freeze]
   s.bindir = "exe".freeze
-  s.date = "2019-01-06"
+  s.date = "2019-02-24"
   s.description = "An idiomatic Ruby interface for common UNIX shell commands.".freeze
   s.email = ["keiju@ruby-lang.org".freeze]
   s.files = [".gitignore".freeze, ".travis.yml".freeze, "Gemfile".freeze, "LICENSE.txt".freeze, "README.md".freeze, "Rakefile".freeze, "bin/console".freeze, "bin/setup".freeze, "lib/shell.rb".freeze, "lib/shell/builtin-command.rb".freeze, "lib/shell/command-processor.rb".freeze, "lib/shell/error.rb".freeze, "lib/shell/filter.rb".freeze, "lib/shell/process-controller.rb".freeze, "lib/shell/system-command.rb".freeze, "lib/shell/version.rb".freeze, "shell.gemspec".freeze]
