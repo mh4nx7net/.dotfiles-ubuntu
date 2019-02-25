@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs pscircle to continuously update desktop wallpaper 
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/bin/bash -c "while true; do cd $HOME/.config/pscircle && ./sec.conf.sh && nitrogen --restore; sleep 1; done"
+
+[Install]
+WantedBy=default.target
