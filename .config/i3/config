@@ -1,0 +1,239 @@
+#sec theme
+#mh4nx7net <androxoss@hotmail.com>
+#repo: https://github.com/mh4nx7net/dotfiles/sectheme
+#licence: mh4nx7net (mohon sertakan sumber)
+font 'pango:San Francisco 8'
+set $1mon "HDMI-1"
+set $2mon "VGA-1"
+set $mod Mod4
+#exec --no-startup-id ~/.screenlayout/def1.sh
+
+# floating windows
+floating_modifier $mod
+# Configure border style <normal|1pixel|pixel xx|none|pixel>
+new_window pixel 1
+new_float normal
+focus_follows_mouse yes
+hide_edge_borders none
+popup_during_fullscreen smart
+
+for_window [class="Nitrogen"]				floating enable
+for_window [title="Calculator"]				floating enable
+for_window [title="nmtui"]				floating enable
+for_window [class="Lxappearance"]			floating enable
+for_window [window_role="pop-up"]			floating enable
+for_window [title="alsamixer"]				floating enable border pixel 1
+for_window [class="Simple-scan"]			floating enable border normal
+for_window [class="Skype"]				floating enable border normal
+for_window [class="Teamviewer"]				floating enable border normal
+for_window [title="File Transfer*"]			floating enable
+for_window [title="Library"]				floating enable
+for_window [title="TeamViewer"]				floating enable
+for_window [class="winbox"]				floating enable
+for_window [class="Ekiga"]				floating enable
+for_window [class="Pidgin"]				floating enable
+for_window [class="0x1400007"]				floating enable
+for_window [title="GParted"]				floating enable
+for_window [title="Software & Updates"]			floating enable
+for_window [title="Android Virtual Device Manager"]	floating enable
+for_window [title="Klondike"]				floating enable
+for_window [title="All Fonts"]				floating enable
+for_window [title="Blender Preferences"]				floating enable
+for_window [urgent=latest]				focus
+#for_window [class="(?i)virtualbox"]			floating enable border normal
+#for_window [class="Firefox"]				move container to workspace 2	#another way for windowassigment
+
+# tiny border
+for_window [class="^.*"] border pixel 0
+
+# assigment apps
+#assign [class="Java" instance="java"]	3
+#assign [class="Eclipse"]		3
+assign [class="Spotify"]		4
+assign [class="gnome-terminal"]		2
+assign [title="Anaconda Navigator"]	2
+assign [class="firefox"]		1
+assign [class="(?i)google chrome"]	1
+assign [class="Insiders"]		3
+assign [class="Pcmanfm"]		9
+assign [class="chrome"]			1
+assign [title="wps"]			5
+assign [title="et"]			5
+assign [title="wpp"]			5
+assign [class="(?i)virtualbox"]		6
+assign [class="qemu"]			6
+assign [class="(?i)vlc"]		4
+# assigment screen
+workspace 1 output $1mon
+workspace 2 output $1mon
+workspace 3 output $2mon
+workspace 4 output $2mon
+workspace 5 output $1mon
+workspace 6 output $1mon
+workspace 9 output $1mon
+#workspace "2: Firefox" output 1mon					#another way for workspaceassigment
+
+# colors
+set $fg  #363837
+set $bg  #363837
+set $focused_bg #363837
+set $ind #407055
+# class                 border  backgr. text indicator child_border
+client.focused          $focused_bg  $focused_bg  $focused_bg  $ind  $focused_bg     
+client.focused_inactive $bg          $bg          $fg          $bg   $bg
+client.unfocused        $bg          $bg          $fg          $bg   $bg
+client.urgent           $bg          $bg          $fg          $ind  $bg
+client.placeholder      $bg          $bg          $fg          $ind  $bg 
+client.background       $bg
+
+# GAPS AND WINDOW RESIZE #
+# gaps inner all set 10
+# gaps outer all plus 5
+#smart_gaps on
+gaps inner 10
+gaps outer -4
+smart_borders on #(on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "  " {
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# BINDING WINDOWS #
+#bindsym $mod+d exec rofi -show run
+bindsym $mod+r mode "  "
+bindsym $mod+a focus parent
+bindsym $mod+w layout tabbed
+bindsym $mod+s layout stacking
+bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen toggle
+bindsym $mod+space		focus mode_toggle
+bindsym $mod+Tab	exec --no-startup-id rofi -show window
+bindsym $mod+Shift+q		kill
+bindsym $mod+Shift+c		reload
+bindsym $mod+Shift+r		restart
+bindsym $mod+Shift+space	floating toggle
+bindsym $mod+Shift+g		mode "$mode_gaps"
+bindsym $mod+Shift+m	exec i3-sensible-terminal -e 'alsamixer'
+bindsym $mod+Shift+e	exec i3-nagbar -t warning -f "pango:San Francisco 7" -m "Do you really want to exit?" -B "    Exit " "i3-msg exit" -B "    Lock " "pkill i3-nagbar && i3lock-fancy -f Source-Sans-Pro" -B "    Reboot " "pkill i3-nagbar && reboot" -B "Shutdown " "pkill i3-nagbar && shutdown -h now"
+#bindsym $mod+Shift+e	exec i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'
+bindsym $mod+Return	exec i3-sensible-terminal
+bindsym $mod+d		exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'San Francisco-10' -nb '#212121' -sb '#2b83a6' -sf '#ffffff'"
+bindsym $mod+Shift+d	exec dmenu_run
+bindsym $mod+p		exec pcmanfm
+bindsym Print		exec gnome-screenshot
+bindsym Ctrl+Print	exec gnome-screenshot -c
+bindsym Shift+Print	exec gnome-screenshot -w
+#bindsym Print		exec scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Pictures' -s
+#bindsym Print		exec --no-startup-id ~/.config/i3/scrot.sh
+
+
+# change borders
+bindsym $mod+u border none
+bindsym $mod+y border pixel 1
+bindsym $mod+n border normal
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal||vertical orientation
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# autostart
+#exec --no-startup-id xfsettingsd --sm-client-disable &
+exec_alwasy --no-startup-id nm-applet
+exec_always --no-startup-id ~/.config/polybar/polylauncer.sh
+exec_always compton --backend glx --vsync drm --unredir-if-possible --paint-on-overlay -b
+#exec_always nitrogen --restore
+
+#
+#bindsym $mod+2 workspace 2:web; layout tabbed; exec [ $(ps h -C vimb | wc -l) = 0 ] && /usr/bin/vimb -s
+#package
+#apt install barrier autocutsel

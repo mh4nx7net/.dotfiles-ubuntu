@@ -1,0 +1,232 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+[bar/main_bar]
+monitor = HDMI1
+font-0 = monospace:size=7
+font-1 = FontAwesome:size=8
+font-3 = FontAwesome:size=7
+module-margin-left = 1
+module-margin-right = 1
+modules-left = powermenu i3
+modules-right = title wlan eth filesystem volume nm-applet
+modules-center = date ;music-pad1 spotify music-pad2
+width = 100%
+height = 18
+;offset-x = 200
+;offset-y = 50
+radius = 750.0
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 1
+line-color = #f00
+border-size = 3
+border-color = #00000000
+padding-left = 1
+padding-right = 2
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+wm-restack = i3
+separator= |
+
+[global/wm]							;backend
+margin-top = 5
+margin-bottom = 5
+
+[colors]
+background = #111
+background-alt = #444
+foreground = #F3E5DA
+foreground-alt = #555
+primary = #F3E5DA
+secondary = #e60053
+alert = #bd2c40
+
+[settings]
+screenchange-reload = true
+;compositing-background = and
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+
+[module/i3]
+type = internal/i3
+index-sort = true
+fuzzy-match = true
+enable-click = true
+enable-scroll = true
+pin-workspaces = false
+wrapping-scroll = true
+;strip-wsnumbers = true
+ws-icon-0 = 0;
+ws-icon-1 = 1; Web
+ws-icon-2 = 2; Term
+ws-icon-3 = 3; Code
+ws-icon-4 = 4; Media
+ws-icon-5 = 5; Office
+ws-icon-6 = 6; Network
+ws-icon-7 = 7; Android
+ws-icon-8 = 8; Media
+ws-icon-9 = 9; File
+format = <label-state> <label-mode>
+label-active-font = 2
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = #407055
+label-focused = %icon% 
+label-focused-foreground = #F3E5DA
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+label-focused-padding = 2
+label-unfocused = %icon%
+label-unfocused-padding = 2
+label-visible = %icon%
+label-visible-underline = #555555
+label-visible-padding = 2
+label-urgent = %icon%
+label-urgent-foreground = #B7A439
+label-urgent-background =  #232323
+label-urgent-padding = 2
+
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+
+[module/title]
+type = internal/xwindow
+format-foreground = #fff
+format-padding = 1
+label-maxlen = 35
+
+
+[module/date]
+type = internal/date
+interval = 5
+date = " %Y-%m-%d"
+time = %H:%M
+format-underline = #655347
+label = %date% %time%
+
+[module/wlan]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+label-connected = %essid% %local_ip%
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underl$
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+
+
+[module/eth]
+type = internal/network
+interface = enp3s0
+interval = 3.0
+format-connected-underline = #55aa55
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underl$
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/nm-applet]
+type = custom/script
+exec = nm-applet
+tail = true
+
+
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/spotify.sh %artist% - %title%
+tail = true
+interval = 2
+format-prefix-foreground = #D5D0A7
+format-suffix-foreground = #D5D0A7
+format-prefix = " "
+format-suffix = " "
+format-overline = #2E2F35
+
+
+[module/volume]
+type = internal/volume
+format-volume =  <bar-volume>
+label-volume = .
+label-volume-foreground = ${root.foreground}
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+format-volume-underline = #55aa55
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = true
+bar-volume-indicator = 
+bar-volume-indicator-font = 3
+bar-volume-fill = 
+bar-volume-fill-font = 3
+bar-volume-empty = 
+bar-volume-empty-font = 3
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+label-open =  turn
+label-open-foreground = ${colors.primary}
+label-close =  cansel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0

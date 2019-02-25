@@ -1,0 +1,80 @@
+URxvt.perl-ext-common: selection-to-clipboard
+! URxvt.letterSpace: -1
+
+! -- Fonts -- !
+URxvt.font:xft:Monospace:pixelsize=12
+URxvt.boldfont:xft:Monospace-Bold:pixelsize=12
+!URxvt*font:  -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
+!URxvt*boldFont:  -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
+!URxvt*italicFont:  xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
+!URxvt*boldItalicFont:  xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
+URxvt*scrollBar: false
+URxvt*loginShell: true
+URxvt*fading: 30
+
+! --- ~/.Xresources ------------------------------------------------------------
+! ------------------------------------------------------------------------------
+! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+! ------------------------------------------------------------------------------
+! --- http://ciembor.github.com/4bit -------------------------------------------
+! ------------------------------------------------------------------------------
+
+! --- special colors ---
+
+*background: #0e1325
+*foreground: #ffffff
+
+! --- standard colors ---
+
+! black
+*color0: #060c13
+
+! bright_black
+*color8: #252b31
+
+! red
+*color1: #ad4f4e
+
+! bright_red
+*color9: #bf9193
+
+! green
+*color2: #41b455
+
+! bright_green
+*color10: #87c597
+
+! yellow
+*color3: #a6b44e
+
+! bright_yellow
+*color11: #bcc593
+
+! blue
+*color4: #4948ba
+
+! bright_blue
+*color12: #8b8dcb
+
+! magenta
+*color5: #ad48b3
+
+! bright_magenta
+*color13: #bf8dc8
+
+! cyan
+*color6: #41acba
+
+! bright_cyan
+*color14: #87c2cb
+
+! white
+*color7: #b4bac0
+
+! bright_white
+*color15: #d2d8df
+
+
+! ------------------------------------------------------------------------------
+! --- end of terminal colors section -------------------------------------------
+! ------------------------------------------------------------------------------
